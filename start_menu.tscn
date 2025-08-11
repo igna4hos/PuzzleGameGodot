@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ui4m1udtdlf"]
+
+[ext_resource type="Script" uid="uid://478gekwg30g6" path="res://start_menu.gd" id="1_jwbto"]
+
+[node name="StartMenu" type="Node2D"]
+script = ExtResource("1_jwbto")
+
+[node name="Level1" type="Button" parent="."]
+offset_left = 1266.0
+offset_top = 150.0
+offset_right = 1566.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 34
+text = "First Level"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
