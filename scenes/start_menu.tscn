@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8ui4m1udtdlf"]
 
-[ext_resource type="Script" uid="uid://478gekwg30g6" path="res://scripts/start_menu.gd" id="1_ouf4f"]
+[ext_resource type="Script" uid="uid://bp4bstjjfuh1d" path="res://scripts/StartMenu/StartMenuController.gd" id="1_ouf4f"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_ouf4f")
