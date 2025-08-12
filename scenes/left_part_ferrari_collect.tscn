@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0hm44pae8jao"]
 
-[ext_resource type="Texture2D" uid="uid://2f82v55odabt" path="res://assets/sprites/FerrariCollectLeft.png" id="1_hkfxs"]
-[ext_resource type="Texture2D" uid="uid://yr3y0hgs0j80" path="res://assets/sprites/RightPart_Ferrari.png" id="2_lrmcr"]
+[ext_resource type="Texture2D" uid="uid://dnjqxkw14aml4" path="res://assets/sprites/center_models/CenterModel_Car_1_2.png" id="1_hkfxs"]
+[ext_resource type="Texture2D" uid="uid://cg7p7so8jyvry" path="res://assets/sprites/right_parts/RightPart_Car_2.png" id="2_lrmcr"]
 [ext_resource type="Script" uid="uid://n5retnfrgah6" path="res://scripts/right_part_ferrari.gd" id="3_fl78e"]
-[ext_resource type="Texture2D" uid="uid://cfuog86l1ctrv" path="res://assets/sprites/LeftPorsche911.png" id="3_ki8sc"]
+[ext_resource type="Texture2D" uid="uid://d35vb6emnrpo5" path="res://assets/sprites/left_parts/LeftPart_Car_2.png" id="3_ki8sc"]
 [ext_resource type="Script" uid="uid://b3sr80egmos7" path="res://scripts/left_porsche_911.gd" id="5_hh18d"]
 
 [node name="LeftPartFerrariCollect" type="Node2D"]

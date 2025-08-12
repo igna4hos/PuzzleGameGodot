@@ -23,6 +23,6 @@ func _input(event):
 func _check_center_or_reset():
 	var viewport_center = get_viewport().get_visible_rect().size / 2
 	if global_position.distance_to(viewport_center) < 300:
-		get_tree().change_scene_to_file("res://collect_first_car.tscn")
+		get_tree().change_scene_to_file("res://scenes/collect_first_car.tscn")
 	else:
 		global_position = start_position

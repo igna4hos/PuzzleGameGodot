@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj4t68j3lks0i"]
 
 [ext_resource type="Script" uid="uid://b5aqaiorp35sb" path="res://scripts/left_part_car.gd" id="2_2ca1c"]
-[ext_resource type="Texture2D" uid="uid://bowhc6sykml0l" path="res://assets/sprites/FerrariF8spiderLight.png" id="3_af7yb"]
-[ext_resource type="Texture2D" uid="uid://ca242accnw1e3" path="res://assets/sprites/LeftPart_Ferrari.png" id="4_eg38f"]
-[ext_resource type="Texture2D" uid="uid://ci0nluk4pcxb2" path="res://assets/sprites/RightPart_Cayenne.png" id="4_ugw3c"]
+[ext_resource type="Texture2D" uid="uid://mguea2au03ye" path="res://assets/sprites/center_models/CenterModel_Car_1_1.png" id="3_af7yb"]
+[ext_resource type="Texture2D" uid="uid://d3r0nkxgm2vkn" path="res://assets/sprites/left_parts/LeftPart_Car_1.png" id="4_eg38f"]
+[ext_resource type="Texture2D" uid="uid://bn61ygya85c8d" path="res://assets/sprites/right_parts/RightPart_Car_1.png" id="4_ugw3c"]
 [ext_resource type="Script" uid="uid://bv2bj8xoujmxh" path="res://scripts/right_part_cayenne.gd" id="5_cxba4"]
 
 [node name="GameplayScene" type="Node2D"]
