@@ -58,7 +58,3 @@ func on_correct_part_delivered(part: Sprite2D):
 
 			$LeftPart.show()
 			$RightPart.show()
-			
-func _process(delta):
-	var texture = $SubViewport.get_texture()
-	$Screen.texture = texture

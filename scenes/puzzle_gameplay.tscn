@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0qhfmp55b6ho"]
+[gd_scene load_steps=8 format=3 uid="uid://c0qhfmp55b6ho"]
 
 [ext_resource type="Script" uid="uid://nyfxi101u4vy" path="res://scripts/puzzle_gameplay.gd" id="1_w4ir0"]
 [ext_resource type="Texture2D" uid="uid://d3r0nkxgm2vkn" path="res://assets/sprites/left_parts/LeftPart_Car_1.png" id="2_j2iho"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bn61ygya85c8d" path="res://assets/sprites/right_parts/RightPart_Car_1.png" id="4_1b2l6"]
 [ext_resource type="Script" uid="uid://cayvuy181hqbe" path="res://scripts/left_part.gd" id="4_red4f"]
 [ext_resource type="Script" uid="uid://301qxt1d3krd" path="res://scripts/right_part.gd" id="6_uey8f"]
-[ext_resource type="Texture2D" uid="uid://dll4y08nyiuv" path="res://icon.svg" id="7_j2vdk"]
-[ext_resource type="PackedScene" uid="uid://cph1umlquv4uv" path="res://scenes/3d_torus.tscn" id="7_uey8f"]
 [ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/3d_torusV2.tscn" id="9_tkanf"]
 
 [node name="PuzzleGameplay" type="Node2D"]
@@ -27,17 +25,6 @@ position = Vector2(2176, 556)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_1b2l6")
 script = ExtResource("6_uey8f")
-
-[node name="Screen" type="Sprite2D" parent="."]
-position = Vector2(1141.5, 911.5)
-scale = Vector2(2.22656, 2.30469)
-texture = ExtResource("7_j2vdk")
-
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
-
-[node name="Node3D" parent="SubViewport" instance=ExtResource("7_uey8f")]
-visible = false
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_left = 266.0
