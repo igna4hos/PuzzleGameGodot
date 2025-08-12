@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4slayfoxyrq3"]
+
+[ext_resource type="Texture2D" uid="uid://dll4y08nyiuv" path="res://icon.svg" id="1_qmak7"]
+[ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/3d_torusV2.tscn" id="2_6we3w"]
+[ext_resource type="Script" uid="uid://nr1p1q3ewh" path="res://scripts/sub_viewport_container.gd" id="2_8ra5a"]
+[ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+texture = ExtResource("1_qmak7")
+script = ExtResource("2_8ra5a")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Sprite2D"]
+offset_left = -258.0
+offset_top = -226.0
+offset_right = 254.0
+offset_bottom = 286.0
+
+[node name="SubViewport" type="SubViewport" parent="Sprite2D/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="Sprite2D/SubViewportContainer/SubViewport" instance=ExtResource("2_6we3w")]
+
+[node name="Camera3D" type="Camera3D" parent="Sprite2D/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0, 1, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Sprite2D/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1500, 500)
+script = ExtResource("4_qmak7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D"]
+offset_left = -258.0
+offset_top = -226.0
+offset_right = 254.0
+offset_bottom = 286.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="Node2D/SubViewportContainer/SubViewport" instance=ExtResource("2_6we3w")]
+
+[node name="Camera3D" type="Camera3D" parent="Node2D/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0, 1, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node2D/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(300, 900)
+script = ExtResource("4_qmak7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D2"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="Node2D2/SubViewportContainer/SubViewport" instance=ExtResource("2_6we3w")]
+
+[node name="Camera3D" type="Camera3D" parent="Node2D2/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.1, 0)

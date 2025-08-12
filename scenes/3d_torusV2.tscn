@@ -1,11 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://db1l5kacuv35m"]
+[gd_scene load_steps=6 format=3 uid="uid://db1l5kacuv35m"]
+
+[ext_resource type="Script" uid="uid://1sj7ofkvtwp6" path="res://scripts/Gameplay/EasyRotationAnimation.gd" id="1_884l8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y50bd"]
 albedo_color = Color(0.0945678, 0.655381, 0.848359, 1)
 metallic = 0.7
 
+[sub_resource type="Animation" id="Animation_rk523"]
+resource_name = "easy_rotation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.523599, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rogep"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_830pk"]
+_data = {
+&"RESET": SubResource("Animation_rogep"),
+&"easy_rotation": SubResource("Animation_rk523")
+}
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_884l8")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
 outer_radius = 0.8
 material = SubResource("StandardMaterial3D_y50bd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CSGTorus3D")
+libraries = {
+&"": SubResource("AnimationLibrary_830pk")
+}
