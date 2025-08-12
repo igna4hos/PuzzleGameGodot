@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://db1l5kacuv35m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y50bd"]
+albedo_color = Color(0.0945678, 0.655381, 0.848359, 1)
+metallic = 0.7
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+outer_radius = 0.8
+material = SubResource("StandardMaterial3D_y50bd")

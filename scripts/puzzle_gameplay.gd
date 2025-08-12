@@ -10,7 +10,7 @@ var parts_queue = [
 		"left":  { "texture": "res://assets/sprites/left_parts/LeftPart_Car_2.png",  "is_correct": false },
 		"right": { "texture": "res://assets/sprites/right_parts/RightPart_Car_2.png", "is_correct": true }
 	}
-]
+] 
 
 var current_index = 0
 var collected_parts = 0
@@ -58,3 +58,7 @@ func on_correct_part_delivered(part: Sprite2D):
 
 			$LeftPart.show()
 			$RightPart.show()
+			
+func _process(delta):
+	var texture = $SubViewport.get_texture()
+	$Screen.texture = texture
