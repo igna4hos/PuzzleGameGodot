@@ -1,6 +1,23 @@
 extends Node3D
 
-@onready var easyRotationAnimation: AnimationPlayer = $EasyRotationAnimation
+@onready var anim_player: AnimationPlayer = $EasyRotationAnimation
 
-func _process(delta: float) -> void:
-	easyRotationAnimation.play("easy_rotation")
+var _base_scale: Vector3
+const DRAG_SCALE := Vector3(1.2, 1.2, 1.2)
+
+func _ready() -> void:
+	_base_scale = scale
+	play_idle_rotation()
+
+func play_idle_rotation() -> void:
+	anim_player.speed_scale = 1.0
+	if anim_player.current_animation != "easy_rotation" or not anim_player.is_playing():
+		anim_player.play("easy_rotation")
+
+func on_drag_start() -> void:
+	anim_player.speed_scale = 0.0
+	scale = _base_scale * DRAG_SCALE
+
+func on_drag_end() -> void:
+	scale = _base_scale
+	play_idle_rotation()
