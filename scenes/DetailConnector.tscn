@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://db1l5kacuv35m"]
+[gd_scene load_steps=7 format=3 uid="uid://db1l5kacuv35m"]
 
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="1_jlbs3"]
 
@@ -49,7 +49,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_jlbs3"]
-resource_name = "scale_move"
+resource_name = " scale_move"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -71,43 +71,6 @@ _data = {
 &"scale_move": SubResource("Animation_jlbs3")
 }
 
-[sub_resource type="Animation" id="Animation_884l8"]
-resource_name = "scale_move"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGTorus3D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2)]
-}
-
-[sub_resource type="Animation" id="Animation_830pk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGTorus3D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_y0lcg"]
-_data = {
-&"RESET": SubResource("Animation_830pk"),
-&"scale_move": SubResource("Animation_884l8")
-}
-
 [node name="DetailConnector" type="Node3D"]
 script = ExtResource("1_jlbs3")
 
@@ -119,9 +82,4 @@ material = SubResource("StandardMaterial3D_y50bd")
 root_node = NodePath("../CSGTorus3D")
 libraries = {
 &"": SubResource("AnimationLibrary_830pk")
-}
-
-[node name="ScaleMoveAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_y0lcg")
 }

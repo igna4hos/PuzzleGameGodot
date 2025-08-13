@@ -1,10 +1,16 @@
 extends Node2D
 
+@onready var connector_controller: Node3D = $SubViewportContainer/SubViewport/Node3D
+@onready var anim_player: AnimationPlayer = connector_controller.get_node("EasyRotationAnimation")
+
 var dragging := false
 var start_position: Vector2
+#var original_scale: Vector3
 
 func _ready():
 	start_position = global_position
+	#original_scale = connector_controller.scale
+	anim_player.play("easy_rotation")
 
 func _input(event):
 	# Нажатие
@@ -12,11 +18,13 @@ func _input(event):
 		if event.pressed:
 			if _is_event_on_object(event.position):
 				dragging = true
+				_play_scale_move()
 		else:
 			# Отпускание
 			if dragging:
 				dragging = false
 				_check_center_or_reset()
+				_play_easy_rotation()
 
 	# Перетаскивание
 	if event is InputEventScreenDrag or event is InputEventMouseMotion:
@@ -36,3 +44,13 @@ func _is_event_on_object(point: Vector2) -> bool:
 
 func _check_center_or_reset():
 	global_position = start_position
+	#connector_controller.scale = original_scale
+	
+func _play_scale_move():
+	anim_player.stop()
+	anim_player.play("scale_move")
+	anim_player.advance(anim_player.current_animation_length) # Заморозка в конце
+	
+func _play_easy_rotation():
+	anim_player.stop()
+	anim_player.play("easy_rotation")
