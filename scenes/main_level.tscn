@@ -30,6 +30,12 @@ transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node2D/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+
 [node name="ExitToMenuButton" type="Button" parent="."]
 offset_left = 25.0
 offset_top = 25.0
