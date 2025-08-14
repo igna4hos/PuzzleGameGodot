@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://citrx45hw16e"]
+
+[ext_resource type="Script" uid="uid://bcqxqjf5bw210" path="res://scripts/level_tile_3d.gd" id="1_7o0sj"]
+
+[sub_resource type="BoxMesh" id="1_hapy0"]
+
+[node name="LevelTile3D" type="Button"]
+custom_minimum_size = Vector2(200, 200)
+flat = true
+script = ExtResource("1_7o0sj")
+
+[node name="Aspect" type="AspectRatioContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Aspect"]
+layout_mode = 2
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Aspect/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="Aspect/SubViewportContainer/SubViewport"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
+
+[node name="Camera3D" type="Camera3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+current = true
+
+[node name="Cube" type="MeshInstance3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
+mesh = SubResource("1_hapy0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+horizontal_alignment = 1

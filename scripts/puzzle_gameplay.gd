@@ -48,7 +48,7 @@ func on_correct_part_delivered(part: Sprite2D):
 
 		current_model_index += 1
 		if current_model_index > total_models:
-			get_tree().change_scene_to_file("res://start_menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 		else:
 			collected_parts = 0
 			$CenterModel.texture = load("res://assets/sprites/center_models/CenterModel_Car_%d_1.png" % current_model_index)
