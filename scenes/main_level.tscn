@@ -1,16 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4slayfoxyrq3"]
+[gd_scene load_steps=9 format=3 uid="uid://c4slayfoxyrq3"]
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
 [ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/DetailConnector.tscn" id="2_6we3w"]
+[ext_resource type="Texture2D" uid="uid://bqb6uyd5wfvgk" path="res://assets/sprites/icons/white_shadow.jpg" id="2_k5pu3"]
 [ext_resource type="PackedScene" uid="uid://bjh8b3di7uqn" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
+[ext_resource type="PackedScene" uid="uid://bp6qtvfi0dry5" path="res://scenes/CenterPartPuzzle.tscn" id="6_bq26l"]
+[ext_resource type="Texture2D" uid="uid://bwufm0j815s0b" path="res://assets/sprites/icons/RedExitButton.png" id="7_u2c82"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8ra5a")
 
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1273, 600)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_k5pu3")
+
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(1500, 500)
+position = Vector2(2000, 500)
 script = ExtResource("4_qmak7")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D"]
@@ -54,11 +63,31 @@ script = ExtResource("5_8ra5a")
 [node name="Camera3D" type="Camera3D" parent="Node2D2/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 2.17, 0.25, 0.62)
 
-[node name="ExitToMenuButton" type="Button" parent="."]
-offset_left = 25.0
+[node name="Node2D3" type="Node2D" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D3"]
+offset_left = 984.0
+offset_top = 322.0
+offset_right = 1496.0
+offset_bottom = 834.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D3/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="Node2D3/SubViewportContainer/SubViewport" instance=ExtResource("6_bq26l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51026, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Node2D3/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1.1)
+
+[node name="ExitToMenuButton" type="TextureButton" parent="."]
+offset_left = 24.0
 offset_top = 25.0
-offset_right = 125.0
-offset_bottom = 125.0
-text = "Exit"
+offset_right = 384.0
+offset_bottom = 385.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_u2c82")
 
 [connection signal="pressed" from="ExitToMenuButton" to="." method="_on_exit_to_menu_button_pressed"]
