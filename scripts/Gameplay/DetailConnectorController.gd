@@ -11,8 +11,8 @@ func _ready() -> void:
 
 func play_idle_rotation() -> void:
 	anim_player.speed_scale = 1.0
-	if anim_player.current_animation != "easy_rotation" or not anim_player.is_playing():
-		anim_player.play("easy_rotation")
+	if anim_player.current_animation != "EasyRotationAnimation/easy_rotation" or not anim_player.is_playing():
+		anim_player.play("EasyRotationAnimation/easy_rotation")
 
 func on_drag_start() -> void:
 	anim_player.speed_scale = 0.0

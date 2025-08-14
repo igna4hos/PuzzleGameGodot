@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4slayfoxyrq3"]
+[gd_scene load_steps=6 format=3 uid="uid://c4slayfoxyrq3"]
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
 [ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/DetailConnector.tscn" id="2_6we3w"]
+[ext_resource type="PackedScene" uid="uid://bjh8b3di7uqn" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
+[ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8ra5a")
@@ -30,11 +32,27 @@ transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node2D/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(350, 600)
+script = ExtResource("4_qmak7")
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D2"]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="Node2D2/SubViewportContainer/SubViewport" instance=ExtResource("4_8ra5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48886, 0, 0)
+script = ExtResource("5_8ra5a")
+
+[node name="Camera3D" type="Camera3D" parent="Node2D2/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 2.17, 0.25, 0.62)
 
 [node name="ExitToMenuButton" type="Button" parent="."]
 offset_left = 25.0

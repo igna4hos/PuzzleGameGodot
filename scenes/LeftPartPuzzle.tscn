@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjh8b3di7uqn"]
 
 [ext_resource type="PackedScene" uid="uid://bvcei3qyyh5i4" path="res://assets/ModelsObject/scooter_left.glb" id="1_4i3bj"]
-[ext_resource type="AnimationLibrary" uid="uid://d37rk511oc8om" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
+[ext_resource type="AnimationLibrary" uid="uid://dfqr356v85v36" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="scooter_left" parent="." instance=ExtResource("1_4i3bj")]
 
 [node name="EasyRotationAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../scooter_left")
 libraries = {
 &"EasyRotationAnimation": ExtResource("2_5gu6c")
 }
