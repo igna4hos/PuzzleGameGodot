@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvcei3qyyh5i4"
-path="res://.godot/imported/scooter_left.glb-7025378747b4793ffb48b7c9dbe5b812.scn"
+uid="uid://m82ogbsp5je8"
+path="res://.godot/imported/tank_0.glb-66043729a676438369dd0d81cbcbb235.scn"
 
 [deps]
 
-source_file="res://assets/ModelsObject/scooter_left.glb"
-dest_files=["res://.godot/imported/scooter_left.glb-7025378747b4793ffb48b7c9dbe5b812.scn"]
+source_file="res://assets/ModelsObject/tank_0.glb"
+dest_files=["res://.godot/imported/tank_0.glb-66043729a676438369dd0d81cbcbb235.scn"]
 
 [params]
 

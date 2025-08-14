@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7sksql33s4ds"
-path="res://.godot/imported/scooter_all.glb-bc23cb856d3609b191ec8079d3603adc.scn"
+uid="uid://dhvxqb1fx637g"
+path="res://.godot/imported/scooter_1.glb-495ba72e1ff7d976b4f70fd4c216eb15.scn"
 
 [deps]
 
-source_file="res://assets/ModelsObject/scooter_all.glb"
-dest_files=["res://.godot/imported/scooter_all.glb-bc23cb856d3609b191ec8079d3603adc.scn"]
+source_file="res://assets/ModelsObject/scooter_1.glb"
+dest_files=["res://.godot/imported/scooter_1.glb-495ba72e1ff7d976b4f70fd4c216eb15.scn"]
 
 [params]
 

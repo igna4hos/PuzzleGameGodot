@@ -1,15 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjh8b3di7uqn"]
 
-[ext_resource type="PackedScene" uid="uid://bvcei3qyyh5i4" path="res://assets/ModelsObject/scooter_left.glb" id="1_4i3bj"]
-[ext_resource type="AnimationLibrary" uid="uid://dfqr356v85v36" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
+[ext_resource type="PackedScene" uid="uid://bvq4y1208cs4" path="res://assets/ModelsObject/scooter_0.glb" id="1_4i3bj"]
+[ext_resource type="AnimationLibrary" uid="uid://c0as0onbyox7f" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
 
-[node name="Node3D" type="Node3D"]
+[node name="LeftPartPuzzle" type="Node3D"]
+transform = Transform3D(0.977958, -0.208801, 0, 0.208801, 0.977958, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="scooter_left" parent="." instance=ExtResource("1_4i3bj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+[node name="scooter_0" parent="." instance=ExtResource("1_4i3bj")]
 
 [node name="EasyRotationAnimation" type="AnimationPlayer" parent="."]
-root_node = NodePath("../scooter_left")
 libraries = {
 &"EasyRotationAnimation": ExtResource("2_5gu6c")
 }
