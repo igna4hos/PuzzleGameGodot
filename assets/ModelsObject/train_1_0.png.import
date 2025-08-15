@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fl1o6ukch5w6"
-path.s3tc="res://.godot/imported/planet_1_0.png-b7c7b94c580d505c578a3dfbb5c6425e.s3tc.ctex"
-path.etc2="res://.godot/imported/planet_1_0.png-b7c7b94c580d505c578a3dfbb5c6425e.etc2.ctex"
+uid="uid://dxbcbo4eps3ny"
+path.s3tc="res://.godot/imported/train_1_0.png-5212009c28b656e6c67a4be2e6f53587.s3tc.ctex"
+path.etc2="res://.godot/imported/train_1_0.png-5212009c28b656e6c67a4be2e6f53587.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/planet_1_0.png"
-dest_files=["res://.godot/imported/planet_1_0.png-b7c7b94c580d505c578a3dfbb5c6425e.s3tc.ctex", "res://.godot/imported/planet_1_0.png-b7c7b94c580d505c578a3dfbb5c6425e.etc2.ctex"]
+source_file="res://assets/ModelsObject/train_1_0.png"
+dest_files=["res://.godot/imported/train_1_0.png-5212009c28b656e6c67a4be2e6f53587.s3tc.ctex", "res://.godot/imported/train_1_0.png-5212009c28b656e6c67a4be2e6f53587.etc2.ctex"]
 
 [params]
 

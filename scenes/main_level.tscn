@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjh8b3di7uqn" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://dhim7r14d6vbf" path="res://scenes/AssembledModel.tscn" id="6_5fr2l"]
+[ext_resource type="PackedScene" uid="uid://bglcl2xlmnoeu" path="res://scenes/AssembledModel.tscn" id="6_5fr2l"]
 [ext_resource type="Texture2D" uid="uid://bwufm0j815s0b" path="res://assets/sprites/icons/RedExitButton.png" id="7_u2c82"]
 
 [node name="MainLevel" type="Node2D"]

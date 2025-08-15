@@ -4,7 +4,6 @@
 [ext_resource type="AnimationLibrary" uid="uid://c0as0onbyox7f" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
 
 [node name="LeftPartPuzzle" type="Node3D"]
-transform = Transform3D(0.977958, -0.208801, 0, 0.208801, 0.977958, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="scooter_0" parent="." instance=ExtResource("1_4i3bj")]
 
