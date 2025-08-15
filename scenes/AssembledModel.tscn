@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhim7r14d6vbf"]
+
+[ext_resource type="PackedScene" uid="uid://c8bvgn6hqugl3" path="res://assets/ModelsObject/scooter.glb" id="1_wqbd1"]
+[ext_resource type="Script" uid="uid://dl13q4ft4orh6" path="res://scripts/Gameplay/ChangeTransparencyController.gd" id="2_nw2hr"]
+
+[node name="AssembledModel" instance=ExtResource("1_wqbd1")]
+script = ExtResource("2_nw2hr")
