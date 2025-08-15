@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqb6uyd5wfvgk"
-path="res://.godot/imported/white_shadow.jpg-b4bce265785e96ef9077087c2ecaa3d4.ctex"
+uid="uid://dl11rr6enijul"
+path="res://.godot/imported/Back.2048x2048.png-fe3c4cfc07b30ca740f9d832a4a20c95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/white_shadow.jpg"
-dest_files=["res://.godot/imported/white_shadow.jpg-b4bce265785e96ef9077087c2ecaa3d4.ctex"]
+source_file="res://assets/sprites/texture2D/Back.2048x2048.png"
+dest_files=["res://.godot/imported/Back.2048x2048.png-fe3c4cfc07b30ca740f9d832a4a20c95.ctex"]
 
 [params]
 

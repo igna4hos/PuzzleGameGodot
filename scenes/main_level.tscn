@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
 [ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/RightPartPuzzle.tscn" id="2_6we3w"]
-[ext_resource type="Texture2D" uid="uid://bqb6uyd5wfvgk" path="res://assets/sprites/icons/white_shadow.jpg" id="2_k5pu3"]
+[ext_resource type="Texture2D" uid="uid://dl11rr6enijul" path="res://assets/sprites/texture2D/Back.2048x2048.png" id="2_k5pu3"]
 [ext_resource type="PackedScene" uid="uid://bjh8b3di7uqn" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
@@ -13,9 +13,8 @@
 script = ExtResource("1_8ra5a")
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1273, 600)
-scale = Vector2(1.3, 1.3)
+position = Vector2(1213, 600)
+scale = Vector2(1.5, 1)
 texture = ExtResource("2_k5pu3")
 
 [node name="LeftPart" type="Node2D" parent="."]
