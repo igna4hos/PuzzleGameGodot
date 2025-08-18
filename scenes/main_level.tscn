@@ -1,12 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4slayfoxyrq3"]
+[gd_scene load_steps=8 format=3 uid="uid://bib7d6vii3fyo"]
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://db1l5kacuv35m" path="res://scenes/DetailConnector.tscn" id="2_6we3w"]
 [ext_resource type="Texture2D" uid="uid://bqb6uyd5wfvgk" path="res://assets/sprites/icons/white_shadow.jpg" id="2_k5pu3"]
-[ext_resource type="PackedScene" uid="uid://bjh8b3di7uqn" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
+[ext_resource type="PackedScene" uid="uid://84nw6id7wkyu" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://bp6qtvfi0dry5" path="res://scenes/CenterPartPuzzle.tscn" id="6_bq26l"]
+[ext_resource type="PackedScene" uid="uid://cqw1al45ui57u" path="res://scenes/CenterPartPuzzle.tscn" id="6_bq26l"]
 [ext_resource type="Texture2D" uid="uid://bwufm0j815s0b" path="res://assets/sprites/icons/RedExitButton.png" id="7_u2c82"]
 
 [node name="MainLevel" type="Node2D"]
@@ -32,8 +31,6 @@ offset_bottom = 286.0
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
-
-[node name="Node3D" parent="Node2D/SubViewportContainer/SubViewport" instance=ExtResource("2_6we3w")]
 
 [node name="Camera3D" type="Camera3D" parent="Node2D/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0, 1, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://db1l5kacuv35m"]
+[gd_scene load_steps=6 format=3 uid="uid://n4mg1cgfnjoa"]
 
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="1_jlbs3"]
 [ext_resource type="AnimationLibrary" uid="uid://dfqr356v85v36" path="res://assets/animations/EasyRotationAnimation.res" id="2_oah04"]

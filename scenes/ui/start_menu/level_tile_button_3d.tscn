@@ -8,6 +8,16 @@
 custom_minimum_size = Vector2(200, 200)
 flat = true
 script = ExtResource("1_7o0sj")
+background_color = Color(0.439216, 0.843137, 0.945098, 1)
+
+[node name="CircleBg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Aspect" type="AspectRatioContainer" parent="."]
 layout_mode = 0
@@ -35,7 +45,3 @@ current = true
 
 [node name="Cube" type="MeshInstance3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
 mesh = SubResource("1_hapy0")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-horizontal_alignment = 1

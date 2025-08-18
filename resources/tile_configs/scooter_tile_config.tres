@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TileModelConfig" load_steps=2 format=3 uid="uid://cvejhu3mqklk0"]
+
+[ext_resource type="Script" uid="uid://doasut6jcj4my" path="res://scripts/model_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+tile_name = "Скутер"
+theme_folder = "cars"
+model_paths = Array[String](["res://assets/ModelsObject/cars/scooter.glb"])
+model_positions = Array[Vector3]([Vector3(0, 0, 0)])
+model_rotations = Array[Vector3]([Vector3(0, 0, 0)])
+model_scales = Array[Vector3]([Vector3(1, 1, 1)])
+model_names = Array[String](["Скутер"])

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="ModelComposition" load_steps=6 format=3 uid="uid://d3ythsrjx4rrt"]
+
+[ext_resource type="Script" uid="uid://bfpsrowdembjc" path="res://scripts/model_composition.gd" id="1"]
+[ext_resource type="Script" uid="uid://doasut6jcj4my" path="res://scripts/model_config.gd" id="2"]
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("2")
+tile_name = ""
+theme_folder = "cars"
+model_paths = Array[String]([])
+model_positions = Array[Vector3]([])
+model_rotations = Array[Vector3]([])
+model_scales = Array[Vector3]([])
+model_names = Array[String]([])
+
+[sub_resource type="Resource" id="3"]
+script = ExtResource("2")
+tile_name = ""
+theme_folder = "cars"
+model_paths = Array[String]([])
+model_positions = Array[Vector3]([])
+model_rotations = Array[Vector3]([])
+model_scales = Array[Vector3]([])
+model_names = Array[String]([])
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
+tile_name = ""
+theme_folder = "cars"
+model_paths = Array[String]([])
+model_positions = Array[Vector3]([])
+model_rotations = Array[Vector3]([])
+model_scales = Array[Vector3]([])
+model_names = Array[String]([])
+
+[resource]
+resource_name = "Car"
+script = ExtResource("1")
+composition_name = "Машина"
+theme_folder = "cars"
+whole_model = SubResource("1")
+left_half = SubResource("2")
+right_half = SubResource("3")
+use_custom_animation = false
+custom_rotation_angle = 30.0
+custom_rotation_speed = 1.0
