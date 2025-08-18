@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://db1l5kacuv35m"]
+[gd_scene load_steps=5 format=3 uid="uid://db1l5kacuv35m"]
 
-[ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="1_jlbs3"]
 [ext_resource type="PackedScene" uid="uid://cv8ty6ldlvgm6" path="res://assets/ModelsObject/tank_1.glb" id="2_g00pm"]
 [ext_resource type="AnimationLibrary" uid="uid://c0as0onbyox7f" path="res://assets/animations/EasyRotationAnimation.res" id="2_oah04"]
 
@@ -26,7 +25,6 @@ _data = {
 }
 
 [node name="RightPartPuzzle" type="Node3D"]
-script = ExtResource("1_jlbs3")
 
 [node name="tank_1" parent="." instance=ExtResource("2_g00pm")]
 
