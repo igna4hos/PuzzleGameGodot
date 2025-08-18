@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dngilt75qwmn0"]
+
+[ext_resource type="Script" uid="uid://do22spmrydp0c" path="res://scripts/Gameplay/part2.gd" id="1_6qngn"]
+[ext_resource type="PackedScene" uid="uid://cv8ty6ldlvgm6" path="res://assets/ModelsObject/tank_1.glb" id="1_m4eq5"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_6qngn")
+
+[node name="tank_1" parent="." instance=ExtResource("1_m4eq5")]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d01j6jdaoxdg0"]
+
+[ext_resource type="PackedScene" uid="uid://bvq4y1208cs4" path="res://assets/ModelsObject/scooter_0.glb" id="1_qanvy"]
+[ext_resource type="Script" uid="uid://do22spmrydp0c" path="res://scripts/Gameplay/part2.gd" id="1_y6gbm"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_y6gbm")
+
+[node name="scooter_0" parent="." instance=ExtResource("1_qanvy")]
