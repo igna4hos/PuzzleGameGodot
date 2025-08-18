@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=4 uid="uid://dit11a18vfufc"]
+[gd_scene load_steps=7 format=4 uid="uid://dit11a18vfufc"]
 
-[ext_resource type="Script" uid="uid://m4khqm13a8k" path="res://scripts/Gameplay/CenterModel2.gd" id="1_hh7yy"]
 [ext_resource type="Texture2D" uid="uid://fpo85eadcdg6" path="res://assets/ModelsObject/tank_0.png" id="1_jgv4o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu2x0"]
@@ -77,7 +76,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ud3so")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_hh7yy")
 
 [node name="rocket" type="Node3D" parent="."]
 
