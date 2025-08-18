@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
 [ext_resource type="PackedScene" uid="uid://bglcl2xlmnoeu" path="res://scenes/AssembledModel.tscn" id="6_5fr2l"]
-[ext_resource type="Texture2D" uid="uid://bwufm0j815s0b" path="res://assets/sprites/icons/RedExitButton.png" id="7_u2c82"]
+[ext_resource type="Texture2D" uid="uid://bryi5e5121se7" path="res://assets/sprites/icons/ExitButtonIcons.png" id="8_k5pu3"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8ra5a")
@@ -18,7 +18,7 @@ scale = Vector2(1.5, 1)
 texture = ExtResource("2_k5pu3")
 
 [node name="LeftPart" type="Node2D" parent="."]
-position = Vector2(350, 600)
+position = Vector2(375, 585)
 script = ExtResource("4_qmak7")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="LeftPart"]
@@ -43,12 +43,14 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.2
 transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 5.25, 1.2, 0)
 
 [node name="CentralPart" type="Node2D" parent="."]
+position = Vector2(1266, 585)
+scale = Vector2(1.2, 1.2)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CentralPart"]
-offset_left = 984.0
-offset_top = 322.0
-offset_right = 1496.0
-offset_bottom = 834.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 
 [node name="SubViewport" type="SubViewport" parent="CentralPart/SubViewportContainer"]
 transparent_bg = true
@@ -64,14 +66,14 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.1)
 
 [node name="RightPart" type="Node2D" parent="."]
-position = Vector2(2000, 500)
+position = Vector2(2157, 585)
 script = ExtResource("4_qmak7")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="RightPart"]
-offset_left = -258.0
-offset_top = -226.0
-offset_right = 254.0
-offset_bottom = 286.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 
 [node name="SubViewport" type="SubViewport" parent="RightPart/SubViewportContainer"]
 transparent_bg = true
@@ -89,10 +91,10 @@ transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7422
 
 [node name="ExitToMenuButton" type="TextureButton" parent="."]
 offset_left = 24.0
-offset_top = 25.0
-offset_right = 384.0
-offset_bottom = 385.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("7_u2c82")
+offset_top = 24.0
+offset_right = 108.0
+offset_bottom = 108.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("8_k5pu3")
 
 [connection signal="pressed" from="ExitToMenuButton" to="." method="_on_exit_to_menu_button_pressed"]

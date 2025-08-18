@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwufm0j815s0b"
-path="res://.godot/imported/RedExitButton.png-1b16bbaf74fece1bd2b5048c76212e7a.ctex"
+uid="uid://bryi5e5121se7"
+path="res://.godot/imported/ExitButtonIcons.png-3556170f93927852cd068271d2b809c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/RedExitButton.png"
-dest_files=["res://.godot/imported/RedExitButton.png-1b16bbaf74fece1bd2b5048c76212e7a.ctex"]
+source_file="res://assets/sprites/icons/ExitButtonIcons.png"
+dest_files=["res://.godot/imported/ExitButtonIcons.png-3556170f93927852cd068271d2b809c8.ctex"]
 
 [params]
 
