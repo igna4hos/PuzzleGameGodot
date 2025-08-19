@@ -1,36 +1,65 @@
 extends Node2D
 
-@export var part_id: int = -1   # ID детали
-#@onready var connector: Node3D = $SubViewportContainer/SubViewport/Node3D
+@export var part_id: int = -1
+@export var game_controller_path: NodePath   # опционально, можно оставить пустым
 
 var dragging := false
 var start_pos: Vector2
+var last_pointer_pos: Vector2
+var _controller: Node = null
 
 func _ready() -> void:
 	start_pos = global_position
-	#if connector and connector.has_method("play_idle_rotation"):
-		#connector.play_idle_rotation()
+	# Попробуем взять контроллер по пути (если задан)
+	if game_controller_path != NodePath():
+		_controller = get_node_or_null(game_controller_path)
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		if _is_event_on_object(event.position):
-			dragging = true
-			#if connector and connector.has_method("on_drag_start"):
-				#connector.on_drag_start()
+func _unhandled_input(event: InputEvent) -> void:
+	# --- Тач ---
+	if event is InputEventScreenTouch:
+		last_pointer_pos = event.position
+		if event.pressed:
+			if _is_event_on_object(event.position):
+				dragging = true
+		else:
+			if dragging:
+				dragging = false
+				_on_drop(event.position)
 
-	elif event is InputEventMouseButton and not event.pressed and dragging:
-		dragging = false
-		_on_drop()
-		#if connector and connector.has_method("on_drag_end"):
-			#connector.on_drag_end()
+	elif event is InputEventScreenDrag:
+		last_pointer_pos = event.position
+		if dragging:
+			global_position = event.position
 
-	elif event is InputEventMouseMotion and dragging:
-		global_position = event.position
+	# --- Мышь ---
+	elif event is InputEventMouseButton:
+		last_pointer_pos = event.position
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				if _is_event_on_object(event.position):
+					dragging = true
+			else:
+				if dragging:
+					dragging = false
+					_on_drop(event.position)
 
-func _on_drop() -> void:
-	#var controller = get_tree().root.get_node("MainScene/GameController")
-	#if controller:
-		#controller.try_attach_part(part_id)
+	elif event is InputEventMouseMotion:
+		last_pointer_pos = event.position
+		if dragging:
+			global_position = event.position
+
+func _on_drop(point: Vector2) -> void:
+	var game_controller = _get_game_controller()
+	if not game_controller:
+		_reset_position()
+		return
+
+	if game_controller.is_point_over_center(point):
+		if game_controller.try_attach_part(part_id):
+			queue_free() # верная деталь "прикрепилась"
+			return
+
+	# не попали или неверная деталь
 	_reset_position()
 
 func _reset_position() -> void:
@@ -41,3 +70,9 @@ func _is_event_on_object(point: Vector2) -> bool:
 	if sprite:
 		return sprite.get_rect().has_point(sprite.to_local(point))
 	return Rect2(-Vector2(200,200)/2, Vector2(200,200)).has_point(to_local(point))
+
+func _get_game_controller() -> Node:
+	if _controller:
+		return _controller
+	# запасной способ — через группу
+	return get_tree().get_first_node_in_group("game_controller")
