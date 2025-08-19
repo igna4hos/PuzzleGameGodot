@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://8ui4m1udtdlf"]
+[gd_scene load_steps=9 format=3 uid="uid://8ui4m1udtdlf"]
 
 [ext_resource type="Script" uid="uid://ke3syfto07yu" path="res://scripts/start_menu.gd" id="1_5v9lq"]
 [ext_resource type="PackedScene" uid="uid://citrx45hw16e" path="res://scenes/ui/start_menu/level_tile_button_3d.tscn" id="2_6k0yq"]
 [ext_resource type="Texture2D" uid="uid://bnrnavbcn5oya" path="res://assets/sprites/texture2D/background_image.png" id="3_bg"]
 [ext_resource type="Texture2D" uid="uid://dl68gnknb4bc3" path="res://assets/sprites/texture2D/like_image.png" id="4_like"]
+[ext_resource type="PackedScene" uid="uid://qb18o37ddnut" path="res://scenes/ui/start_menu/tile_scenes/cars.tscn" id="4_nxjfj"]
 [ext_resource type="Texture2D" uid="uid://dxcjqlhemes4q" path="res://assets/sprites/texture2D/other_game_image.png" id="5_fcv5n"]
-[ext_resource type="Resource" uid="uid://bpan0er123456" path="res://resources/tile_configs/panzer_tile_config.tres" id="6_panzer"]
-[ext_resource type="Resource" uid="uid://bcars123456" path="res://resources/tile_configs/cars_collection_tile_config.tres" id="7_cars_collection"]
 [ext_resource type="FontFile" uid="uid://wn2s6r6ke6c4" path="res://fonts/ArialBold.TTF" id="8_4v6gu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1"]
@@ -23,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5v9lq")
+min_tile = 40
 row_offset_multiplier = 0.7
 this_game_button_size = Vector2(10, 10)
 all_games_button_size = Vector2(10, 10)
@@ -61,17 +61,15 @@ layout_mode = 2
 
 [node name="Tile1" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
-tile_models = ExtResource("6_panzer")
+tile_scene = ExtResource("4_nxjfj")
 
 [node name="Tile2" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 2
-tile_models = ExtResource("6_panzer")
 
 [node name="Tile3" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 3
-tile_models = ExtResource("7_cars_collection")
 
 [node name="RowMiddle" type="HBoxContainer" parent="MainLayout/GameArea/Rows"]
 layout_mode = 2

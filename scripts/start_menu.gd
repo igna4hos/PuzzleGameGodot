@@ -29,7 +29,7 @@ const COLS := 3
 @onready var all_games_label: Label = $MainLayout/RightPanel/PanelMargin/ButtonsContainer/AllGamesButton/AllGamesLabel
 
 func _ready() -> void:
-	# Устанавливаем текст кнопки из локализации
+	# Set button text from localization
 	if all_games_label:
 		all_games_label.text = Localization.get_new_game_text()
 	
@@ -46,36 +46,36 @@ func _notification(what: int) -> void:
 func _reflow() -> void:
 	var screen_width: float = get_viewport_rect().size.x
 	
-	# Адаптивная ширина правой панели (25.3% от экрана)
+	# Adaptive right panel width (fraction of screen)
 	var panel_width: int = int(screen_width * panel_width_ratio)
 	if right_panel:
 		right_panel.custom_minimum_size.x = panel_width
 	
-	# Скругление углов панели
+	# Rounded corners for the panel
 	if panel_bg:
 		var style_box := StyleBoxFlat.new()
-		style_box.bg_color = Color(0, 0, 0, 0.47)  # Обновленная прозрачность
+		style_box.bg_color = Color(0, 0, 0, 0.47)  # Updated transparency
 		style_box.corner_radius_top_left = panel_corner_radius
 		style_box.corner_radius_bottom_left = panel_corner_radius
-		# Для Panel используем "panel"
+		# For Panel use the "panel" style override key
 		panel_bg.add_theme_stylebox_override("panel", style_box)
 	
-	# Адаптивные размеры кнопок (отложенно, чтобы контейнеры успели обновиться)
+	# Adaptive button sizes (deferred so containers update)
 	call_deferred("_apply_button_sizes")
 	
-	# Размер плиток с учётом панели
+	# Tile size accounting for the panel
 	var avail_w: float = (screen_width - panel_width) * 0.9
 	var tile: int = clamp(int((avail_w - float(h_gap) * float(COLS - 1)) / float(COLS)), min_tile, max_tile)
 	_apply_tile_size(row_top, tile)
 	_apply_tile_size(row_mid, tile)
 	_apply_tile_size(row_bot, tile)
 	
-	# Настраиваемое смещение рядов
+	# Configurable row offset
 	var offset = 0.0
 	if row_offset_enabled:
 		offset = (tile * row_offset_multiplier) + (h_gap * row_offset_multiplier)
 	
-	# Добавляем spacer в верхний и нижний ряды для смещения их вправо
+	# Add spacer to top and bottom rows to shift them right
 	if spacer_top:
 		spacer_top.custom_minimum_size.x = offset
 		print("Top spacer size: ", offset)
@@ -83,13 +83,13 @@ func _reflow() -> void:
 		spacer_bottom.custom_minimum_size.x = offset
 		print("Bottom spacer size: ", offset)
 	
-	# Убираем spacer из среднего ряда, чтобы он был смещён влево
+	# Remove spacer from middle row to shift it left
 	if spacer_mid:
 		spacer_mid.custom_minimum_size.x = 0
 		print("Mid spacer size: 0")
 
 func _force_layout_update() -> void:
-	# Принудительно обновляем позиции
+	# Force layout update
 	if rows:
 		rows.queue_redraw()
 		rows.notification(NOTIFICATION_RESIZED)
@@ -120,7 +120,7 @@ func _apply_button_sizes() -> void:
 		all_games_button.custom_minimum_size = all_games_button_size
 		print("AllGamesButton size set to: ", all_games_button_size)
 		
-		# Настраиваем хайлайт для картинки внутри контейнера
+		# Setup highlight for the image button inside the container
 		if all_games_image:
 			_setup_button_highlight(all_games_image)
 
@@ -128,19 +128,19 @@ func _setup_button_highlight(button: TextureButton) -> void:
 	if not button:
 		return
 	
-	# Подключаем сигналы только для нажатия
+	# Connect only press/release signals
 	if not button.button_down.is_connected(_on_button_pressed):
 		button.button_down.connect(_on_button_pressed.bind(button))
 	if not button.button_up.is_connected(_on_button_released):
 		button.button_up.connect(_on_button_released.bind(button))
 
 func _on_button_pressed(button: TextureButton) -> void:
-	# Плавно затемняем при нажатии
+	# Smoothly darken on press
 	var tween = create_tween()
 	tween.tween_property(button, "modulate", Color(0.8, 0.8, 0.8, 1.0), 0.1)
 
 func _on_button_released(button: TextureButton) -> void:
-	# Плавно возвращаем обычный цвет
+	# Smoothly return to normal color
 	var tween = create_tween()
 	tween.tween_property(button, "modulate", Color.WHITE, 0.15)
 
@@ -151,14 +151,14 @@ func _connect_side_buttons() -> void:
 		all_games_image.pressed.connect(_on_all_games_pressed)
 
 func _on_this_game_pressed() -> void:
-	# Переход на страницу этой игры в App Store
-	print("Переход на страницу этой игры в App Store")
-	# Пример: OS.shell_open("https://apps.apple.com/app/your-game-id")
+	# Open this game's App Store page
+	print("Opening this game's App Store page")
+	# Example: OS.shell_open("https://apps.apple.com/app/your-game-id")
 
 func _on_all_games_pressed() -> void:
-	# Переход ко всем играм разработчика в App Store
-	print("Переход ко всем играм разработчика в App Store")
-	# Пример: OS.shell_open("https://apps.apple.com/developer/your-developer-id")
+	# Open developer's App Store page
+	print("Opening developer's App Store page")
+	# Example: OS.shell_open("https://apps.apple.com/developer/your-developer-id")
 
 func _on_level_tile_pressed_bound(tile: Button) -> void:
 	if tile:

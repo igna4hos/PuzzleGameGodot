@@ -1,15 +1,15 @@
 class_name ModelComposition
 extends Resource
 
-## Композиция из нескольких моделей для тайла
+## Composition of multiple models for a tile
 @export_group("Composition Info")
-@export var composition_name: String = ""  # Название композиции (например "Машина")
-@export var theme_folder: String = "cars"  # Папка темы в res://assets/ModelsObject/
+@export var composition_name: String = ""  # Composition name (e.g. "Car")
+@export var theme_folder: String = "cars"  # Theme folder under res://assets/ModelsObject/
 
 @export_group("Models")
-@export var whole_model: Resource  # Целая модель
-@export var left_half: Resource    # Левая половинка
-@export var right_half: Resource   # Правая половинка
+@export var whole_model: Resource  # Whole model
+@export var left_half: Resource    # Left half
+@export var right_half: Resource   # Right half
 
 @export_group("Animation Settings")
 @export var use_custom_animation: bool = false
@@ -17,7 +17,7 @@ extends Resource
 @export var custom_rotation_speed: float = 1.0
 
 func _init():
-	# Инициализируем пустые конфигурации
+	# Initialize empty configurations
 	if not whole_model:
 		whole_model = preload("res://scripts/model_config.gd").new()
 	if not left_half:
@@ -25,28 +25,28 @@ func _init():
 	if not right_half:
 		right_half = preload("res://scripts/model_config.gd").new()
 
-## Быстрая настройка для темы машин
+## Quick setup for the cars theme
 func setup_cars_theme():
-	composition_name = "Машина"
+	composition_name = "Car"
 	theme_folder = "cars"
 	
-	# Пример настройки (пути нужно будет скорректировать под ваши файлы)
+	# Example setup (adjust paths to match your files)
 	var ModelConfigClass = preload("res://scripts/model_config.gd")
 	
-	# Создаём конфигурацию для целой модели
+	# Create configuration for the whole model
 	whole_model = ModelConfigClass.new()
-	whole_model.tile_name = "Целая машина"
+	whole_model.tile_name = "Whole car"
 	whole_model.theme_folder = "cars"
-	whole_model.add_model("res://assets/ModelsObject/cars/car.glb", Vector3.ZERO, Vector3.ZERO, Vector3.ONE, "Целая машина")
+	whole_model.add_model("res://assets/ModelsObject/cars/car.glb", Vector3.ZERO, Vector3.ZERO, Vector3.ONE, "Whole car")
 	
-	# Создаём конфигурацию для левой половины
+	# Create configuration for the left half
 	left_half = ModelConfigClass.new()
-	left_half.tile_name = "Левая половина"
+	left_half.tile_name = "Left half"
 	left_half.theme_folder = "cars"
-	left_half.add_model("res://assets/ModelsObject/cars/car_left.glb", Vector3(-0.5, 0, 0), Vector3.ZERO, Vector3.ONE, "Левая половина")
+	left_half.add_model("res://assets/ModelsObject/cars/car_left.glb", Vector3(-0.5, 0, 0), Vector3.ZERO, Vector3.ONE, "Left half")
 	
-	# Создаём конфигурацию для правой половины
+	# Create configuration for the right half
 	right_half = ModelConfigClass.new()
-	right_half.tile_name = "Правая половина"
+	right_half.tile_name = "Right half"
 	right_half.theme_folder = "cars"
-	right_half.add_model("res://assets/ModelsObject/cars/car_right.glb", Vector3(0.5, 0, 0), Vector3.ZERO, Vector3.ONE, "Правая половина")
+	right_half.add_model("res://assets/ModelsObject/cars/car_right.glb", Vector3(0.5, 0, 0), Vector3.ZERO, Vector3.ONE, "Right half")
