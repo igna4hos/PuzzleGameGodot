@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj0n1pg5bfql5"]
+
+[ext_resource type="Script" uid="uid://c7g0ya46yr45f" path="res://scripts/Gameplay/MainSceneController.gd" id="1_ibiss"]
+[ext_resource type="Script" uid="uid://b21m4w7rihn8b" path="res://scripts/Gameplay/CenterModel.gd" id="2_ibiss"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_ibiss")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.02075)
+
+[node name="CentralElementPart" type="Node2D" parent="."]
+position = Vector2(1000, 500)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CentralElementPart"]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="CentralElementPart/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="CentralElement" type="Node3D" parent="CentralElementPart/SubViewportContainer/SubViewport"]
+script = ExtResource("2_ibiss")
+
+[node name="Camera3D" type="Camera3D" parent="CentralElementPart/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.31544)
+
+[node name="LeftElementPart" type="Node2D" parent="."]
+position = Vector2(300, 500)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="LeftElementPart"]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="LeftElementPart/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="LeftElement" type="Node3D" parent="LeftElementPart/SubViewportContainer/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="LeftElementPart/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.40464, 0.940553, 0)
