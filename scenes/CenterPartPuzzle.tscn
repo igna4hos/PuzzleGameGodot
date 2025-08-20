@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqw1al45ui57u"]
 
-[ext_resource type="PackedScene" uid="uid://c7sksql33s4ds" path="res://assets/ModelsObject/cars/scooter_all.glb" id="1_aiw5w"]
+[ext_resource type="PackedScene" uid="uid://81og3gghw41o" path="res://assets/ModelsObject/cars/scooter.glb" id="1_aiw5w"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="scooter_all" parent="." instance=ExtResource("1_aiw5w")]
+[node name="scooter" parent="." instance=ExtResource("1_aiw5w")]

@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/global.gd"
-Localization="*res://scripts/localization.gd"
+Global="*res://scripts/common/global.gd"
+Localization="*res://scripts/common/localization.gd"
 
 [display]
 

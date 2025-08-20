@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://84nw6id7wkyu"]
 
-[ext_resource type="PackedScene" uid="uid://csyqb3a57y01t" path="res://assets/ModelsObject/cars/scooter_left.glb" id="1_4i3bj"]
+[ext_resource type="PackedScene" uid="uid://bvcei3qyyh5i4" path="res://assets/ModelsObject/cars/scooter_left.glb" id="1_4i3bj"]
 [ext_resource type="AnimationLibrary" uid="uid://dfqr356v85v36" path="res://assets/animations/EasyRotationAnimation.res" id="2_5gu6c"]
 
 [node name="Node3D" type="Node3D"]
