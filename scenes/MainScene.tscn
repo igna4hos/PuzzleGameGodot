@@ -11,7 +11,7 @@ script = ExtResource("1_ibiss")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.02075)
 
 [node name="CentralElementPart" type="Node2D" parent="."]
-position = Vector2(1000, 500)
+position = Vector2(1200, 500)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CentralElementPart"]
 offset_left = -256.0
@@ -52,7 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35488, 0, 0)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.40464, 0.940553, 0)
 
 [node name="RightElementPart" type="Node2D" parent="."]
-position = Vector2(1800, 500)
+position = Vector2(2000, 500)
 script = ExtResource("3_c6dvc")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="RightElementPart"]
