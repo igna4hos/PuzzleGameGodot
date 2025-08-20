@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var center_model: Node3D = $CentralElementPart/SubViewportContainer/SubViewport/CentralElement
 @onready var left_root: Node3D  = $LeftElementPart/SubViewportContainer/SubViewport/LeftElement
+@onready var right_root: Node3D = $RightElementPart/SubViewportContainer/SubViewport/RightElement
 
 var center_models = [
 	{"scene":"res://scenes/models/rocket.tscn", "left_id":1, "right_id":2},
@@ -30,17 +31,20 @@ func load_center_model() -> void:
 func load_side_parts() -> void:
 	for c in left_root.get_children():
 		c.queue_free()
+	for c in right_root.get_children():
+		c.queue_free()
 
 	var left_data  = side_parts[(current_index * 2)     % side_parts.size()]
+	var right_data = side_parts[(current_index * 2 + 1) % side_parts.size()]
 
 	var left_part  = load(left_data.scene).instantiate()
-	
-	print("part.id before, ", left_part.part_id)
-	# у Part.gd есть экспортируемое поле part_id
+	var right_part = load(right_data.scene).instantiate()
+
 	left_part.part_id  = left_data.id
-	print("left_data.id before, ", left_data.id)
+	right_part.part_id = right_data.id
 
 	left_root.add_child(left_part)
+	right_root.add_child(right_part)
 
 func _next_model() -> void:
 	current_index += 1
