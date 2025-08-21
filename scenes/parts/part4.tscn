@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dngilt75qwmn0"]
-
-[ext_resource type="PackedScene" uid="uid://da1cts3y34hop" path="res://assets/ModelsObject/cars/panzer_right.glb" id="1_m4eq5"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="panzer_right" parent="." instance=ExtResource("1_m4eq5")]

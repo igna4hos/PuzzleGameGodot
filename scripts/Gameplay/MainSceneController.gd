@@ -7,15 +7,18 @@ extends Node2D
 @onready var var_ref_right: Node2D  = $RightElementPart
 
 var center_models = [
-	{"scene":"res://scenes/models/rocket.tscn", "left_id":1, "right_id":2},
-	{"scene":"res://scenes/models/earth.tscn",  "left_id":3, "right_id":4}
+	{"scene":"res://assets/ModelsObject/cars/scooter.glb", "left_id":1, "right_id":2},
+	{"scene":"res://assets/ModelsObject/cars/panzer.glb", "left_id":3, "right_id":4},
+	{"scene":"res://assets/ModelsObject/cars/train.glb", "left_id":5, "right_id":6},
 ]
 
 var side_parts = [
-	{"scene":"res://scenes/parts/part1.tscn", "id":1},
-	{"scene":"res://scenes/parts/part4.tscn", "id":4},
-	{"scene":"res://scenes/parts/part2.tscn", "id":2},
-	{"scene":"res://scenes/parts/part3.tscn", "id":3}
+	{"scene":"res://assets/ModelsObject/cars/scooter_left.glb", "id":1},
+	{"scene":"res://assets/ModelsObject/cars/panzer_left.glb", "id":3},
+	{"scene":"res://assets/ModelsObject/cars/train_left.glb", "id":5},
+	{"scene":"res://assets/ModelsObject/cars/panzer_right.glb", "id":4},
+	{"scene":"res://assets/ModelsObject/cars/scooter_right.glb", "id":2},
+	{"scene":"res://assets/ModelsObject/cars/train_right.glb", "id":6}
 ]
 
 var current_index := 0
