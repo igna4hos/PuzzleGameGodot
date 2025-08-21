@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0tcfwyjtw664"]
+
+[ext_resource type="PackedScene" uid="uid://bl60j52sv218v" path="res://assets/ModelsObject/cars/panzer_left.glb" id="1_nora0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="panzer_left" parent="." instance=ExtResource("1_nora0")]

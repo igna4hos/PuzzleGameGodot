@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cldnnxt4q61cn"
-path="res://.godot/imported/CenterModel_Car_1_3.png-ee47fcdb7b2d484bd2ee5b438ec19952.ctex"
+uid="uid://dl11rr6enijul"
+path="res://.godot/imported/Back.2048x2048.png-fe3c4cfc07b30ca740f9d832a4a20c95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/center_models/CenterModel_Car_1_3.png"
-dest_files=["res://.godot/imported/CenterModel_Car_1_3.png-ee47fcdb7b2d484bd2ee5b438ec19952.ctex"]
+source_file="res://assets/sprites/texture2D/Back.2048x2048.png"
+dest_files=["res://.godot/imported/Back.2048x2048.png-fe3c4cfc07b30ca740f9d832a4a20c95.ctex"]
 
 [params]
 

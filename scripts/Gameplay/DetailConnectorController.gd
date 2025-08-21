@@ -15,7 +15,9 @@ func play_idle_rotation() -> void:
 		anim_player.play("EasyRotationAnimation/easy_rotation")
 
 func on_drag_start() -> void:
-	anim_player.speed_scale = 0.0
+	# Сбрасываем анимацию в начало и останавливаем
+	anim_player.stop()
+	anim_player.seek(0, true) 
 	scale = _base_scale * DRAG_SCALE
 
 func on_drag_end() -> void:

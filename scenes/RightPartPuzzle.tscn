@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://n4mg1cgfnjoa"]
+[gd_scene load_steps=5 format=3 uid="uid://crnaln8khwqim"]
 
-[ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="1_jlbs3"]
-[ext_resource type="AnimationLibrary" uid="uid://dfqr356v85v36" path="res://assets/animations/EasyRotationAnimation.res" id="2_oah04"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y50bd"]
-albedo_color = Color(0.0945678, 0.655381, 0.848359, 1)
-metallic = 0.7
+[ext_resource type="PackedScene" uid="uid://da1cts3y34hop" path="res://assets/ModelsObject/cars/panzer_right.glb" id="1_ngbk7"]
+[ext_resource type="AnimationLibrary" uid="uid://c0as0onbyox7f" path="res://assets/animations/EasyRotationAnimation.res" id="2_oah04"]
 
 [sub_resource type="Animation" id="Animation_rk523"]
 resource_name = "easy_rotation"
@@ -28,15 +24,11 @@ _data = {
 &"easy_rotation": SubResource("Animation_rk523")
 }
 
-[node name="DetailConnector" type="Node3D"]
-script = ExtResource("1_jlbs3")
+[node name="RightPartPuzzle" type="Node3D"]
 
-[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
-outer_radius = 0.8
-material = SubResource("StandardMaterial3D_y50bd")
+[node name="panzer_right" parent="." instance=ExtResource("1_ngbk7")]
 
 [node name="EasyRotationAnimation" type="AnimationPlayer" parent="."]
-root_node = NodePath("../CSGTorus3D")
 libraries = {
 &"": SubResource("AnimationLibrary_jbej2"),
 &"EasyRotationAnimation": ExtResource("2_oah04")

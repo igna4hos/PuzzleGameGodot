@@ -1,90 +1,101 @@
-[gd_scene load_steps=8 format=3 uid="uid://bib7d6vii3fyo"]
+[gd_scene load_steps=9 format=3 uid="uid://bib7d6vii3fyo"]
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
-[ext_resource type="Texture2D" uid="uid://bqb6uyd5wfvgk" path="res://assets/sprites/icons/white_shadow.jpg" id="2_k5pu3"]
+[ext_resource type="PackedScene" uid="uid://crnaln8khwqim" path="res://scenes/RightPartPuzzle.tscn" id="2_6we3w"]
+[ext_resource type="Texture2D" uid="uid://dl11rr6enijul" path="res://assets/sprites/texture2D/Back.2048x2048.png" id="2_k5pu3"]
 [ext_resource type="PackedScene" uid="uid://84nw6id7wkyu" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
-[ext_resource type="Script" uid="uid://cxroxd4wm0t23" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://cqw1al45ui57u" path="res://scenes/CenterPartPuzzle.tscn" id="6_bq26l"]
-[ext_resource type="Texture2D" uid="uid://bwufm0j815s0b" path="res://assets/sprites/icons/RedExitButton.png" id="7_u2c82"]
+[ext_resource type="Script" uid="uid://c26enp1pscogu" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
+[ext_resource type="PackedScene" uid="uid://bglcl2xlmnoeu" path="res://scenes/AssembledModel.tscn" id="6_5fr2l"]
+[ext_resource type="Texture2D" uid="uid://bryi5e5121se7" path="res://assets/sprites/icons/ExitButtonIcons.png" id="8_k5pu3"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_8ra5a")
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1273, 600)
-scale = Vector2(1.3, 1.3)
+position = Vector2(1213, 600)
+scale = Vector2(1.5, 1)
 texture = ExtResource("2_k5pu3")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(2000, 500)
+[node name="LeftPart" type="Node2D" parent="."]
+position = Vector2(375, 585)
 script = ExtResource("4_qmak7")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D"]
-offset_left = -258.0
-offset_top = -226.0
-offset_right = 254.0
-offset_bottom = 286.0
-
-[node name="SubViewport" type="SubViewport" parent="Node2D/SubViewportContainer"]
-transparent_bg = true
-handle_input_locally = false
-render_target_update_mode = 4
-
-[node name="Camera3D" type="Camera3D" parent="Node2D/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0, 1, 1)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node2D/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
-
-[node name="Node2D2" type="Node2D" parent="."]
-position = Vector2(350, 600)
-script = ExtResource("4_qmak7")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D2"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="LeftPart"]
 offset_left = -256.0
 offset_top = -256.0
 offset_right = 256.0
 offset_bottom = 256.0
 
-[node name="SubViewport" type="SubViewport" parent="Node2D2/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="LeftPart/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 
-[node name="Node3D" parent="Node2D2/SubViewportContainer/SubViewport" instance=ExtResource("4_8ra5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48886, 0, 0)
+[node name="Node3D" parent="LeftPart/SubViewportContainer/SubViewport" instance=ExtResource("4_8ra5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 script = ExtResource("5_8ra5a")
 
-[node name="Camera3D" type="Camera3D" parent="Node2D2/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 2.17, 0.25, 0.62)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="LeftPart/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.2, 0)
 
-[node name="Node2D3" type="Node2D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="LeftPart/SubViewportContainer/SubViewport"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 5.25, 1.2, 0)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D3"]
-offset_left = 984.0
-offset_top = 322.0
-offset_right = 1496.0
-offset_bottom = 834.0
+[node name="CentralPart" type="Node2D" parent="."]
+position = Vector2(1266, 585)
+scale = Vector2(1.2, 1.2)
 
-[node name="SubViewport" type="SubViewport" parent="Node2D3/SubViewportContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CentralPart"]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="CentralPart/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 
-[node name="Node3D" parent="Node2D3/SubViewportContainer/SubViewport" instance=ExtResource("6_bq26l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51026, 0, 0)
+[node name="AssembledModel" parent="CentralPart/SubViewportContainer/SubViewport" instance=ExtResource("6_5fr2l")]
 
-[node name="Camera3D" type="Camera3D" parent="Node2D3/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1.1)
+[node name="Camera3D" type="Camera3D" parent="CentralPart/SubViewportContainer/SubViewport/AssembledModel"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CentralPart/SubViewportContainer/SubViewport/AssembledModel"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.1)
+
+[node name="RightPart" type="Node2D" parent="."]
+position = Vector2(2157, 585)
+script = ExtResource("4_qmak7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="RightPart"]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="RightPart/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Node3D" parent="RightPart/SubViewportContainer/SubViewport" instance=ExtResource("2_6we3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+script = ExtResource("5_8ra5a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="RightPart/SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="RightPart/SubViewportContainer/SubViewport"]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -5.25, 1.2, 0)
 
 [node name="ExitToMenuButton" type="TextureButton" parent="."]
 offset_left = 24.0
-offset_top = 25.0
-offset_right = 384.0
-offset_bottom = 385.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("7_u2c82")
+offset_top = 24.0
+offset_right = 108.0
+offset_bottom = 108.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("8_k5pu3")
 
 [connection signal="pressed" from="ExitToMenuButton" to="." method="_on_exit_to_menu_button_pressed"]
