@@ -13,9 +13,9 @@ var center_models = [
 
 var side_parts = [
 	{"scene":"res://scenes/parts/part1.tscn", "id":1},
+	{"scene":"res://scenes/parts/part4.tscn", "id":4},
 	{"scene":"res://scenes/parts/part2.tscn", "id":2},
-	{"scene":"res://scenes/parts/part3.tscn", "id":3},
-	{"scene":"res://scenes/parts/part4.tscn", "id":4}
+	{"scene":"res://scenes/parts/part3.tscn", "id":3}
 ]
 
 var current_index := 0
@@ -48,15 +48,22 @@ func load_side_parts() -> void:
 	left_root.add_child(left_part)
 	right_root.add_child(right_part)
 
-func try_attach_part(id: int) -> void:
+func try_attach_part(id: int) -> bool:
 	if id == center_model.left_id and not center_model.left_attached:
 		print("left_collect")
 		center_model._set_transparency(1.0, "left")
 		center_model.left_attached = true
+		_next_model()
 	elif id == center_model.right_id and not center_model.right_attached:
+		print("right_collect")
 		center_model._set_transparency(1.0, "right")
 		center_model.right_attached = true
-	_next_model()
+		_next_model()
+	
+	# при любой смене — сразу обнуляем состояние пазлов
+	center_model.left_attached = false
+	center_model.right_attached = false
+	return true
 	#if center_model.left_attached and center_model.right_attached:
 		#_next_model()
 

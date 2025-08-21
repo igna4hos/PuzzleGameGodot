@@ -12,7 +12,6 @@ func _ready() -> void:
 	
 	mesh_instance_left.set_surface_override_material(0, material_left)
 	
-	
 	var material_right := mesh_instance_right.get_active_material(0).duplicate()
 	material_right.resource_local_to_scene = true
 

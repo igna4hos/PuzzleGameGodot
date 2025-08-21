@@ -4,21 +4,27 @@ extends Node2D
 var dragging := false
 var start_position: Vector2
 var part_id: int = -1
+var attached := false
 
 func _ready() -> void:
 	start_position = global_position
 
 func _process(delta: float) -> void:
+	if attached:
+		return
 	var screen_center = get_viewport_rect().size / 2
 	if global_position.distance_to(screen_center) <= center_tolerance:
 		_on_reach_center()
 		
 func _on_reach_center() -> void:
-	var main_controller = get_tree().get_root().get_node("MainScene") #Scene title at the root
-	print(part_id)
-	_reset_position()
+	var main_controller = get_tree().get_root().get_node("MainScene") # Scene title at the root
 	if main_controller:
-		main_controller.try_attach_part(part_id)
+		var result = main_controller.try_attach_part(part_id)
+		if result:
+			_reset_position()
+			attached = false
+		else:
+			_reset_position()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
