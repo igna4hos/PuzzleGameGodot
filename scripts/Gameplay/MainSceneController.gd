@@ -16,21 +16,20 @@ var side_parts = [
 	{"scene":"res://assets/ModelsObject/cars/scooter_left.glb", "id":1},
 	{"scene":"res://assets/ModelsObject/cars/panzer_left.glb", "id":3},
 	{"scene":"res://assets/ModelsObject/cars/train_left.glb", "id":5},
-	{"scene":"res://assets/ModelsObject/cars/panzer_right.glb", "id":4},
 	{"scene":"res://assets/ModelsObject/cars/scooter_right.glb", "id":2},
+	{"scene":"res://assets/ModelsObject/cars/panzer_right.glb", "id":4},
 	{"scene":"res://assets/ModelsObject/cars/train_right.glb", "id":6}
 ]
 
-var current_index := 0
+var current_index_model := 0
+var current_index_side := 0
 
 func _ready() -> void:
 	load_center_model()
 	load_side_parts()
-	#await get_tree().create_timer(5.0).timeout
-	#_next_model()
 
 func load_center_model() -> void:
-	var data = center_models[current_index]
+	var data = center_models[current_index_model]
 	center_model.load_model(data["scene"], data["left_id"], data["right_id"])
 
 func load_side_parts() -> void:
@@ -39,10 +38,10 @@ func load_side_parts() -> void:
 	for c in right_root.get_children():
 		c.queue_free()
 
-	var left_data  = side_parts[(current_index * 2)     % side_parts.size()]
-	var right_data = side_parts[(current_index * 2 + 1) % side_parts.size()]
+	var left_data = side_parts[(current_index_side * 2) % side_parts.size()]
+	var right_data = side_parts[(current_index_side * 2 + 1) % side_parts.size()]
 
-	var left_part  = load(left_data.scene).instantiate()
+	var left_part = load(left_data.scene).instantiate()
 	var right_part = load(right_data.scene).instantiate()
 
 	var_ref_left.part_id = left_data.id
@@ -57,22 +56,30 @@ func try_attach_part(id: int) -> bool:
 		center_model._set_transparency(1.0, "left")
 		center_model.left_attached = true
 		_next_model()
+		return true
 	elif id == center_model.right_id and not center_model.right_attached:
 		print("right_collect")
 		center_model._set_transparency(1.0, "right")
 		center_model.right_attached = true
 		_next_model()
-	
-	# при любой смене — сразу обнуляем состояние пазлов
-	center_model.left_attached = false
-	center_model.right_attached = false
-	return true
-	#if center_model.left_attached and center_model.right_attached:
-		#_next_model()
+		return true
+	return false
 
 func _next_model() -> void:
-	current_index += 1
-	if current_index >= center_models.size():
-		current_index = 0
-	load_center_model()
+	current_index_side += 1
 	load_side_parts()
+	if center_model.left_attached and center_model.right_attached:
+		center_model.left_attached = false
+		center_model.right_attached = false
+		current_index_model += 1
+		# Replace with next mini-game
+		var end_game := false
+		if current_index_model >= center_models.size():
+			current_index_side = 0
+			current_index_model = 0
+			load_center_model()
+			load_side_parts()
+			end_game = true
+		if (end_game == false):
+			#End part replace to mini-game
+			load_center_model()
