@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bib7d6vii3fyo"]
 
 [ext_resource type="Script" uid="uid://cx58mib1lyq6o" path="res://scripts/Gameplay/MainLevelController.gd" id="1_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://crnaln8khwqim" path="res://scenes/RightPartPuzzle.tscn" id="2_6we3w"]
+[ext_resource type="PackedScene" uid="uid://crnaln8khwqim" path="res://scenes/gameplay/RightPartPuzzle.tscn" id="2_6we3w"]
 [ext_resource type="Texture2D" uid="uid://dl11rr6enijul" path="res://assets/sprites/texture2D/Back.2048x2048.png" id="2_k5pu3"]
-[ext_resource type="PackedScene" uid="uid://84nw6id7wkyu" path="res://scenes/LeftPartPuzzle.tscn" id="4_8ra5a"]
+[ext_resource type="PackedScene" uid="uid://84nw6id7wkyu" path="res://scenes/gameplay/LeftPartPuzzle.tscn" id="4_8ra5a"]
 [ext_resource type="Script" uid="uid://ddu2crcijv8ut" path="res://scripts/Gameplay/node_2d_move.gd" id="4_qmak7"]
 [ext_resource type="Script" uid="uid://c26enp1pscogu" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_8ra5a"]
-[ext_resource type="PackedScene" uid="uid://bglcl2xlmnoeu" path="res://scenes/AssembledModel.tscn" id="6_5fr2l"]
+[ext_resource type="PackedScene" uid="uid://bglcl2xlmnoeu" path="res://scenes/gameplay/AssembledModel.tscn" id="6_5fr2l"]
 [ext_resource type="Texture2D" uid="uid://bryi5e5121se7" path="res://assets/sprites/icons/ExitButtonIcons.png" id="8_k5pu3"]
 
 [node name="MainLevel" type="Node2D"]

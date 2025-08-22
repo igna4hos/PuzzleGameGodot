@@ -8,7 +8,7 @@ var part_id: int = -1
 func _ready() -> void:
 	start_position = global_position
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var screen_center = get_viewport_rect().size / 2
 	if global_position.distance_to(screen_center) <= center_tolerance:
 		_on_reach_center()

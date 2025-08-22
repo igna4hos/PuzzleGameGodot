@@ -167,4 +167,4 @@ func _on_level_tile_pressed_bound(tile: Button) -> void:
 			var global := get_node_or_null("/root/Global")
 			if global:
 				global.selected_level = int(id_v)
-			get_tree().change_scene_to_file("res://scenes/main_level.tscn")
+			get_tree().change_scene_to_file("res://scenes/gameplay/MainScene.tscn")

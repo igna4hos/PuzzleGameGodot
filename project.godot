@@ -24,6 +24,8 @@ Localization="*res://scripts/common/localization.gd"
 
 window/size/viewport_width=2532
 window/size/viewport_height=1170
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [rendering]
 

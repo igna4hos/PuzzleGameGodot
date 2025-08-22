@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c4mbjql0cs0nn" path="res://assets/ModelsObject/cars/car.glb" id="1"]
 [ext_resource type="PackedScene" uid="uid://cdh2kqocy1ejv" path="res://assets/ModelsObject/cars/panzer.glb" id="1_ry4mp"]
-[ext_resource type="PackedScene" uid="uid://c3wwqo6j0gk0q" path="res://assets/ModelsObject/cars/bike.glb" id="3_qx5jw"]
+[ext_resource type="PackedScene" uid="uid://mpf6giiyx1rb" path="res://assets/ModelsObject/cars/bike.glb" id="3_qx5jw"]
 [ext_resource type="PackedScene" uid="uid://dw4xutea46p8c" path="res://assets/ModelsObject/cars/train.glb" id="4_2rovc"]
-[ext_resource type="PackedScene" uid="uid://81og3gghw41o" path="res://assets/ModelsObject/cars/scooter.glb" id="5_3airq"]
+[ext_resource type="PackedScene" uid="uid://ctkgtsmq0rela" path="res://assets/ModelsObject/cars/scooter.glb" id="5_3airq"]
 
 [node name="SingleCar" type="Node3D"]
 
@@ -18,7 +18,7 @@ transform = Transform3D(0.592487, 0.027941, -0.142402, -0.0287349, 0.609323, 0, 
 transform = Transform3D(-0.578135, 0, 0.274518, 0, 0.64, 0, -0.274518, 0, -0.578135, -0.547194, 1.1766, 1.06378)
 
 [node name="bike" parent="." instance=ExtResource("3_qx5jw")]
-transform = Transform3D(-0.275372, 0, -0.740453, 0, 0.79, 0, 0.740453, 0, -0.275372, 0.0947177, 1.20369, 2.98023e-08)
+transform = Transform3D(-0.275372, 0, -0.740453, 0, 0.79, 0, 0.740453, 0, -0.275372, 0.095, 1.204, 0)
 
 [node name="scooter" parent="." instance=ExtResource("5_3airq")]
 transform = Transform3D(-0.374139, 0, -0.603424, 0, 0.71, 0, 0.603424, 0, -0.374139, 0.597135, 1.30249, -0.834467)
