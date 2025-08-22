@@ -28,6 +28,10 @@ func _ready() -> void:
 	load_center_model()
 	load_side_parts()
 
+func _on_exit_to_menu_button_pressed() -> void:
+	print("Exit button pressed")
+	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+
 func load_center_model() -> void:
 	var data = center_models[current_index_model]
 	center_model.load_model(data["scene"], data["left_id"], data["right_id"])
