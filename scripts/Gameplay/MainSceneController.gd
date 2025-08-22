@@ -6,12 +6,13 @@ extends Node2D
 @onready var right_root: Node3D = $RightElementPart/SubViewportContainer/SubViewport/RightElement
 @onready var var_ref_right: Node2D  = $RightElementPart
 
+'''
 var center_models = [
 	{"scene":"res://assets/ModelsObject/cars/scooter.glb", "left_id":1, "right_id":2},
 	{"scene":"res://assets/ModelsObject/cars/panzer.glb", "left_id":3, "right_id":4},
 	{"scene":"res://assets/ModelsObject/cars/train.glb", "left_id":5, "right_id":6},
 	{"scene":"res://assets/ModelsObject/cars/bike.glb", "left_id":7, "right_id":8},
-	{"scene":"res://assets/ModelsObject/cars/car.glb", "left_id":9, "right_id":10},
+	{"scene":"res://assets/ModelsObject/cars/car.glb", "left_id":9, "right_id":10}
 ]
 
 var side_parts = [
@@ -36,11 +37,22 @@ var side_parts = [
 	{"scene":"res://assets/ModelsObject/cars/scooter_left.glb", "id":1},
 	{"scene":"res://assets/ModelsObject/cars/car_left.glb", "id":9}
 ]
+'''
+
+var center_models: Array = []
+var side_parts: Array = []
 
 var current_index_model := 0
 var current_index_side := 0
 
 func _ready() -> void:
+	var level_data = Global.model_kits.get(Global.selected_level, null)
+	if level_data:
+		center_models = level_data["center_models"]
+		side_parts = level_data["side_parts"]
+	else:
+		print("No data for level:", Global.selected_level)
+	
 	load_center_model()
 	load_side_parts()
 
@@ -95,10 +107,7 @@ func _next_model() -> void:
 		# Replace with next mini-game
 		var end_game := false
 		if current_index_model >= center_models.size():
-			current_index_side = 0
-			current_index_model = 0
-			load_center_model()
-			load_side_parts()
+			get_tree().change_scene_to_file("res://scenes/ui/start_menu/start_menu.tscn")
 			end_game = true
 		if (end_game == false):
 			#End part replace to mini-game
