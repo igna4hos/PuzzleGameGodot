@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq85vuxninaid"]
+
+[ext_resource type="PackedScene" uid="uid://dbounaydea5tr" path="res://assets/ModelsObject/insects/ant.glb" id="1_lxcjv"]
+[ext_resource type="PackedScene" uid="uid://b426oyi7cvoul" path="res://assets/ModelsObject/insects/butterfly.glb" id="2_yh7c4"]
+
+[node name="InsectsLevel" type="Node3D"]
+
+[node name="ant" parent="." instance=ExtResource("1_lxcjv")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.1, 1.8, -0.381)
+
+[node name="butterfly" parent="." instance=ExtResource("2_yh7c4")]
+transform = Transform3D(-0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, -0.1, 1.8, 0.023)

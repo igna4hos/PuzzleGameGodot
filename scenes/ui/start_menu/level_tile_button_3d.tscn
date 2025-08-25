@@ -6,7 +6,6 @@
 custom_minimum_size = Vector2(200, 200)
 flat = true
 script = ExtResource("1_7o0sj")
-background_color = Color(0.439216, 0.843137, 0.945098, 1)
 
 [node name="CircleBg" type="Panel" parent="."]
 layout_mode = 1
@@ -30,12 +29,13 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Aspect/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(200, 200)
 render_target_update_mode = 4
 
 [node name="World" type="Node3D" parent="Aspect/SubViewportContainer/SubViewport"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
+light_energy = 5.0
 
 [node name="Camera3D" type="Camera3D" parent="Aspect/SubViewportContainer/SubViewport/World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.72198)

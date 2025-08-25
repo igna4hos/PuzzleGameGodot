@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://8ui4m1udtdlf"]
+[gd_scene load_steps=10 format=3 uid="uid://8ui4m1udtdlf"]
 
 [ext_resource type="Script" uid="uid://ke3syfto07yu" path="res://scripts/start_menu/start_menu.gd" id="1_5v9lq"]
 [ext_resource type="PackedScene" uid="uid://citrx45hw16e" path="res://scenes/ui/start_menu/level_tile_button_3d.tscn" id="2_6k0yq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dl68gnknb4bc3" path="res://assets/sprites/texture2D/like_image.png" id="4_like"]
 [ext_resource type="PackedScene" uid="uid://qb18o37ddnut" path="res://scenes/ui/start_menu/tile_scenes/cars.tscn" id="4_nxjfj"]
 [ext_resource type="Texture2D" uid="uid://dxcjqlhemes4q" path="res://assets/sprites/texture2D/other_game_image.png" id="5_fcv5n"]
+[ext_resource type="PackedScene" uid="uid://bq85vuxninaid" path="res://scenes/ui/start_menu/tile_scenes/insects.tscn" id="5_uojqy"]
 [ext_resource type="FontFile" uid="uid://wn2s6r6ke6c4" path="res://fonts/ArialBold.TTF" id="8_4v6gu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1"]
@@ -61,15 +62,19 @@ layout_mode = 2
 
 [node name="Tile1" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 tile_scene = ExtResource("4_nxjfj")
 
 [node name="Tile2" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 2
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
+tile_scene = ExtResource("5_uojqy")
 
 [node name="Tile3" parent="MainLayout/GameArea/Rows/RowTop" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 3
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="RowMiddle" type="HBoxContainer" parent="MainLayout/GameArea/Rows"]
 layout_mode = 2
@@ -81,14 +86,17 @@ layout_mode = 2
 [node name="Tile4" parent="MainLayout/GameArea/Rows/RowMiddle" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 4
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="Tile5" parent="MainLayout/GameArea/Rows/RowMiddle" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 5
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="Tile6" parent="MainLayout/GameArea/Rows/RowMiddle" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 6
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="RowBottom" type="HBoxContainer" parent="MainLayout/GameArea/Rows"]
 layout_mode = 2
@@ -99,14 +107,17 @@ layout_mode = 2
 [node name="Tile7" parent="MainLayout/GameArea/Rows/RowBottom" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 7
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="Tile8" parent="MainLayout/GameArea/Rows/RowBottom" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 8
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="Tile9" parent="MainLayout/GameArea/Rows/RowBottom" instance=ExtResource("2_6k0yq")]
 layout_mode = 2
 level_id = 9
+background_color = Color(0.4392, 0.8431, 0.9451, 1)
 
 [node name="RightPanel" type="Control" parent="MainLayout"]
 custom_minimum_size = Vector2(640, 0)
