@@ -6,39 +6,6 @@ extends Node2D
 @onready var right_root: Node3D = $RightElementPart/SubViewportContainer/SubViewport/RightElement
 @onready var var_ref_right: Node2D  = $RightElementPart
 
-'''
-var center_models = [
-	{"scene":"res://assets/ModelsObject/cars/scooter.glb", "left_id":1, "right_id":2},
-	{"scene":"res://assets/ModelsObject/cars/panzer.glb", "left_id":3, "right_id":4},
-	{"scene":"res://assets/ModelsObject/cars/train.glb", "left_id":5, "right_id":6},
-	{"scene":"res://assets/ModelsObject/cars/bike.glb", "left_id":7, "right_id":8},
-	{"scene":"res://assets/ModelsObject/cars/car.glb", "left_id":9, "right_id":10}
-]
-
-var side_parts = [
-	{"scene":"res://assets/ModelsObject/cars/scooter_left.glb", "id":1},
-	{"scene":"res://assets/ModelsObject/cars/panzer_left.glb", "id":3},
-	{"scene":"res://assets/ModelsObject/cars/train_left.glb", "id":5},
-	{"scene":"res://assets/ModelsObject/cars/scooter_right.glb", "id":2},
-	{"scene":"res://assets/ModelsObject/cars/car_right.glb", "id":10},
-	{"scene":"res://assets/ModelsObject/cars/panzer_left.glb", "id":3},
-	{"scene":"res://assets/ModelsObject/cars/panzer_right.glb", "id":4},
-	{"scene":"res://assets/ModelsObject/cars/bike_right.glb", "id":8},
-	{"scene":"res://assets/ModelsObject/cars/train_left.glb", "id":5},
-	{"scene":"res://assets/ModelsObject/cars/car_left.glb", "id":9},
-	{"scene":"res://assets/ModelsObject/cars/bike_left.glb", "id":7},
-	{"scene":"res://assets/ModelsObject/cars/train_right.glb", "id":6},
-	{"scene":"res://assets/ModelsObject/cars/bike_left.glb", "id":7},
-	{"scene":"res://assets/ModelsObject/cars/scooter_right.glb", "id":2},
-	{"scene":"res://assets/ModelsObject/cars/panzer_right.glb", "id":4},
-	{"scene":"res://assets/ModelsObject/cars/bike_right.glb", "id":8},
-	{"scene":"res://assets/ModelsObject/cars/car_right.glb", "id":10},
-	{"scene":"res://assets/ModelsObject/cars/train_right.glb", "id":6},
-	{"scene":"res://assets/ModelsObject/cars/scooter_left.glb", "id":1},
-	{"scene":"res://assets/ModelsObject/cars/car_left.glb", "id":9}
-]
-'''
-
 var center_models: Array = []
 var side_parts: Array = []
 
