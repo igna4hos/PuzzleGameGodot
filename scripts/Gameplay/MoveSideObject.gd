@@ -18,6 +18,7 @@ func _on_reach_center() -> void:
 	if main_controller:
 		var result = main_controller.try_attach_part(part_id)
 		if result:
+			dragging = false
 			_reset_position()
 
 func _input(event: InputEvent) -> void:
