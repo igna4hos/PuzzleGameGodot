@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/common/global.gd"
 Localization="*res://scripts/common/localization.gd"
+TransitionScreen="*res://scenes/ui/transition_screen.tscn"
 
 [display]
 

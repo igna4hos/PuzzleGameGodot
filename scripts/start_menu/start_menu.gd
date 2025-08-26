@@ -166,4 +166,6 @@ func _on_level_tile_pressed_bound(tile: Button) -> void:
 		if typeof(id_v) == TYPE_INT:
 			Global.selected_level = int(id_v)
 			print("Selected level:", Global.selected_level)
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://scenes/gameplay/MainScene.tscn")
