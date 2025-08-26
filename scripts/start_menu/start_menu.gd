@@ -33,7 +33,6 @@ func _ready() -> void:
 	if all_games_label:
 		all_games_label.text = Localization.get_new_game_text()
 	
-	call_deferred("_setup_adaptive_layout")
 	call_deferred("_apply_button_sizes")
 	call_deferred("_connect_tiles")
 	call_deferred("_connect_side_buttons")
