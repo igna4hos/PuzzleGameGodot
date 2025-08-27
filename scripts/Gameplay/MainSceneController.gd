@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var center_model: Node3D = $CentralElementPart/SubViewportContainer/SubViewport/CentralElement
+@onready var center_model: Node2D = $CentralElementPart
 @onready var left_root: Node3D  = $LeftElementPart/SubViewportContainer/SubViewport/LeftElement
 @onready var var_ref_left: Node2D  = $LeftElementPart
 @onready var right_root: Node3D = $RightElementPart/SubViewportContainer/SubViewport/RightElement
@@ -25,6 +25,8 @@ func _ready() -> void:
 
 func _on_exit_to_menu_button_pressed() -> void:
 	print("Exit button pressed")
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 
 func load_center_model() -> void:
@@ -76,6 +78,8 @@ func _next_model() -> void:
 		# Replace with next mini-game
 		var end_game := false
 		if current_index_model >= center_models.size():
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 			end_game = true
 		if (end_game == false):

@@ -56,6 +56,7 @@ transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7422
 
 [node name="CentralElementPart" type="Node2D" parent="."]
 position = Vector2(1266, 585)
+script = ExtResource("2_ibiss")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CentralElementPart"]
 offset_left = -256.0
@@ -72,7 +73,6 @@ render_target_update_mode = 4
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.1)
 
 [node name="CentralElement" type="Node3D" parent="CentralElementPart/SubViewportContainer/SubViewport"]
-script = ExtResource("2_ibiss")
 
 [node name="Camera3D" type="Camera3D" parent="CentralElementPart/SubViewportContainer/SubViewport/CentralElement"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1.1)

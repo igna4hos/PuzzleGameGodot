@@ -1,4 +1,4 @@
-extends Node3D
+extends Node2D
 
 var left_id: int
 var right_id: int
@@ -15,8 +15,9 @@ func load_model(scene_path: String, l_id: int, r_id: int) -> void:
 	left_attached = false
 	right_attached = false
 
+	var center_element = $SubViewportContainer/SubViewport/CentralElement
 	model_root = load(scene_path).instantiate()
-	add_child(model_root)
+	center_element.add_child(model_root)
 	
 	_set_transparency(0.5, "both")
 
