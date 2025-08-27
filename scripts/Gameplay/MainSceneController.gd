@@ -33,9 +33,11 @@ func load_center_model() -> void:
 
 func load_side_parts() -> void:
 	for c in left_root.get_children():
-		c.queue_free()
+		if c.name != "EasyRotationAnimation":
+			c.queue_free()
 	for c in right_root.get_children():
-		c.queue_free()
+		if c.name != "EasyRotationAnimation":
+			c.queue_free()
 
 	var left_data = side_parts[(current_index_side * 2) % side_parts.size()]
 	var right_data = side_parts[(current_index_side * 2 + 1) % side_parts.size()]
