@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func _on_exit_to_menu_button_pressed() -> void:
 	print("Exit button pressed")
-	get_tree().change_scene_to_file("res://scenes/ui/start_menu/start_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 
 func load_center_model() -> void:
 	var data = center_models[current_index_model]
@@ -76,7 +76,7 @@ func _next_model() -> void:
 		# Replace with next mini-game
 		var end_game := false
 		if current_index_model >= center_models.size():
-			get_tree().change_scene_to_file("res://scenes/ui/start_menu/start_menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
 			end_game = true
 		if (end_game == false):
 			#End part replace to mini-game

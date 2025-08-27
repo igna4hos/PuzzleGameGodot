@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqw1al45ui57u"]
-
-[ext_resource type="PackedScene" uid="uid://ctkgtsmq0rela" path="res://assets/ModelsObject/cars/scooter.glb" id="1_aiw5w"]
-
-[node name="CenterPartPuzzle" type="Node3D"]
-
-[node name="scooter" parent="." instance=ExtResource("1_aiw5w")]
