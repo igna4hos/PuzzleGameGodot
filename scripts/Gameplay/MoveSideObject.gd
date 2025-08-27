@@ -8,7 +8,6 @@ var part_id: int = -1
 
 func _ready() -> void:
 	start_position = global_position
-	# Найдем контейнер 3D узла (LeftElement/RightElement) и запустим idle-анимацию, если доступна
 	var sv := $SubViewportContainer/SubViewport
 	if sv:
 		connector_controller = sv.get_node_or_null("LeftElement")
@@ -27,7 +26,6 @@ func _on_reach_center() -> void:
 	if main_controller:
 		var result = main_controller.try_attach_part(part_id)
 		if result:
-			# Сбрасываем перетаскивание, иначе нода продолжит следовать за курсором
 			dragging = false
 			_reset_position()
 			_on_drag_end()
@@ -37,7 +35,7 @@ func _input(event: InputEvent) -> void:
 		if event.pressed:
 			if _is_event_on_object(event.position):
 				dragging = true
-				_on_drag_end()
+				_on_drag_start()
 		else:
 			if dragging:
 				dragging = false
