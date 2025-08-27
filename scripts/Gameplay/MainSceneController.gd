@@ -5,12 +5,15 @@ extends Node2D
 @onready var var_ref_left: Node2D  = $LeftElementPart
 @onready var right_root: Node3D = $RightElementPart/SubViewportContainer/SubViewport/RightElement
 @onready var var_ref_right: Node2D  = $RightElementPart
+@onready var object_assembled_anim: AnimationPlayer = $CentralElementPart/SubViewportContainer/SubViewport/CentralElement/ObjectAssembledAnimation
 
 var center_models: Array = []
 var side_parts: Array = []
 
 var current_index_model := 0
 var current_index_side := 0
+
+var _center_orig_pos: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	var level_data = Global.model_kits.get(Global.selected_level, null)
@@ -19,6 +22,8 @@ func _ready() -> void:
 		side_parts = level_data["side_parts"]
 	else:
 		print("No data for level:", Global.selected_level)
+	
+	_center_orig_pos = center_model.position
 	
 	load_center_model()
 	load_side_parts()
@@ -58,15 +63,46 @@ func try_attach_part(id: int) -> bool:
 		print("left_collect")
 		center_model._set_transparency(1.0, "left")
 		center_model.left_attached = true
-		_next_model()
+		_collect_central()
 		return true
 	elif id == center_model.right_id and not center_model.right_attached:
 		print("right_collect")
 		center_model._set_transparency(1.0, "right")
 		center_model.right_attached = true
-		_next_model()
+		_collect_central()
 		return true
 	return false
+	
+func _collect_central() -> void:
+	if center_model.left_attached and center_model.right_attached:
+		_play_assembled_animation()
+	else:
+		_next_model()
+
+func _play_assembled_animation() -> void:
+	if object_assembled_anim == null:
+		_next_model()
+		return
+	var cb := Callable(self, "_on_object_assembled_anim_finished")
+	if object_assembled_anim.is_connected("animation_finished", cb):
+		object_assembled_anim.disconnect("animation_finished", cb)
+	object_assembled_anim.connect("animation_finished", cb)
+	object_assembled_anim.play("ObjectAssembledAnimation")
+
+func _on_object_assembled_anim_finished(anim_name: String) -> void:
+	if anim_name != "ObjectAssembledAnimation":
+		return
+	var cb := Callable(self, "_on_object_assembled_anim_finished")
+	if object_assembled_anim.is_connected("animation_finished", cb):
+		object_assembled_anim.disconnect("animation_finished", cb)
+	var tw = center_model.create_tween()
+	var target_pos = center_model.position + Vector2(0, -800)
+	tw.tween_property(center_model, "position", target_pos, 0.6)
+	tw.connect("finished", Callable(self, "_on_move_tween_finished"))
+
+func _on_move_tween_finished() -> void:
+	center_model.position = _center_orig_pos
+	_next_model()
 
 func _next_model() -> void:
 	current_index_side += 1

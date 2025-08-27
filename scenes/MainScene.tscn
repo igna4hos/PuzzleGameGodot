@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj0n1pg5bfql5"]
+[gd_scene load_steps=9 format=3 uid="uid://bj0n1pg5bfql5"]
 
 [ext_resource type="Script" uid="uid://c7g0ya46yr45f" path="res://scripts/Gameplay/MainSceneController.gd" id="1_ibiss"]
 [ext_resource type="Texture2D" uid="uid://dl11rr6enijul" path="res://assets/sprites/texture2D/Back.2048x2048.png" id="2_611at"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bryi5e5121se7" path="res://assets/sprites/icons/ExitButtonIcons.png" id="3_k24pf"]
 [ext_resource type="AnimationLibrary" uid="uid://c0as0onbyox7f" path="res://assets/animations/EasyRotationAnimation.res" id="4_anim"]
 [ext_resource type="Script" uid="uid://c26enp1pscogu" path="res://scripts/Gameplay/DetailConnectorController.gd" id="5_ctrl"]
+[ext_resource type="AnimationLibrary" uid="uid://ce2x1tmd26ka1" path="res://assets/animations/ObjectAssembledAnimation.res" id="8_u1u68"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_ibiss")
@@ -74,7 +75,12 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 
 [node name="CentralElement" type="Node3D" parent="CentralElementPart/SubViewportContainer/SubViewport"]
 
-[node name="Camera3D" type="Camera3D" parent="CentralElementPart/SubViewportContainer/SubViewport/CentralElement"]
+[node name="ObjectAssembledAnimation" type="AnimationPlayer" parent="CentralElementPart/SubViewportContainer/SubViewport/CentralElement"]
+libraries = {
+&"": ExtResource("8_u1u68")
+}
+
+[node name="Camera3D" type="Camera3D" parent="CentralElementPart/SubViewportContainer/SubViewport"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1.1)
 
 [node name="RightElementPart" type="Node2D" parent="."]
