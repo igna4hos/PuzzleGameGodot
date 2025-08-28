@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://5dxccpdm1s5a"]
+[gd_scene load_steps=3 format=3 uid="uid://e4yltfr5das0"]
 
-[ext_resource type="Script" uid="uid://c6k0ytb0m2cqf" path="res://scripts/Gameplay/MainScene3DController.gd" id="1_cimgk"]
-[ext_resource type="Script" uid="uid://bihq05mbtcf8k" path="res://scripts/Gameplay/MoveSide3DController.gd" id="2_ahnyj"]
+[ext_resource type="Script" uid="uid://c6k0ytb0m2cqf" path="res://scripts/Gameplay/MainScene3DController.gd" id="1_wnq8i"]
+[ext_resource type="Script" uid="uid://bihq05mbtcf8k" path="res://scripts/Gameplay/MoveSide3DController.gd" id="3"]
 
-[node name="MainScene" type="Node3D"]
-script = ExtResource("1_cimgk")
+[node name="MainScene3D" type="Node3D"]
+script = ExtResource("1_wnq8i")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.69988)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.48246)
+[node name="MainScene3D#Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="LeftElementPart" type="Node3D" parent="."]
-script = ExtResource("2_ahnyj")
+script = ExtResource("3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
