@@ -9,6 +9,7 @@ var _dragging: bool = false
 var _drag_node: Node3D = null
 var _orig_global_pos: Vector3
 var _orig_transform: Transform3D
+var part_id: int = -1
 
 func _ready() -> void:
 	# найдем камеру (приоритет: camera_path затем viewport camera)
@@ -95,3 +96,19 @@ func _try_end_drag() -> void:
 
 func _on_return_finished() -> void:
 	_drag_node = null
+
+func _process(_delta: float) -> void:
+	if _drag_node != null:
+		var screen_pos: Vector2 = _cam.unproject_position(_drag_node.global_position)
+		var viewport_size: Vector2 = get_viewport().get_visible_rect().size
+		var center_screen: Vector2 = viewport_size / 2
+		var distance_to_center: float = screen_pos.distance_to(center_screen)
+		if distance_to_center < 250:
+			_on_reach_center()
+
+func _on_reach_center() -> void:
+	var main_controller = get_tree().get_root().get_node("MainScene3D") # Scene title at the root
+	if main_controller:
+		var result = main_controller.try_attach_part(part_id)
+		if result:
+			_try_end_drag()
