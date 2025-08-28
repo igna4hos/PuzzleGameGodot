@@ -10,6 +10,13 @@ script = ExtResource("1_wnq8i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="LeftElementPart" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+script = ExtResource("3")
+
+[node name="CentralElement" type="Node3D" parent="."]
+
+[node name="RightElementPart" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 script = ExtResource("3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
