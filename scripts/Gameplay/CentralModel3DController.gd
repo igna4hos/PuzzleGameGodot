@@ -15,11 +15,10 @@ func load_model(scene_path: String, l_id: int, r_id: int) -> void:
 	left_attached = false
 	right_attached = false
 
-	var center_element = $"."
 	model_root = load(scene_path).instantiate()
-	center_element.add_child(model_root)
+	self.add_child(model_root)
 	
-	#_set_transparency(0.5, "both")
+	_set_transparency(0.5, "both")
 
 func _set_transparency(alpha: float, side: String = "both") -> void:
 	if not model_root:

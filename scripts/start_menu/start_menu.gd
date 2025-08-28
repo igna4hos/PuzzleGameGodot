@@ -167,4 +167,4 @@ func _on_level_tile_pressed_bound(tile: Button) -> void:
 			print("Selected level:", Global.selected_level)
 			TransitionScreen.transition()
 			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_file("res://scenes/MainScene.tscn")
+			get_tree().change_scene_to_file("res://scenes/MainScene3D.tscn")

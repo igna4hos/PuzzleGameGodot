@@ -3,6 +3,7 @@ extends Node3D
 @export var camera_path: NodePath = NodePath("../MainScene3D#Camera3D") # можно указать путь к вашей Camera3D, иначе будет использована get_viewport().get_camera_3d()
 @export var pick_threshold := 80.0 # px порог для выбора объекта по экранному расстоянию
 @export var return_time := 0.25 # время твина возврата
+@onready var anim_player: AnimationPlayer = $EasyRotationAnimation
 
 var _cam: Camera3D
 var _dragging: bool = false
@@ -10,9 +11,12 @@ var _drag_node: Node3D = null
 var _orig_global_pos: Vector3
 var _orig_transform: Transform3D
 var part_id: int = -1
+var _base_scale: Vector3
+const DRAG_SCALE := Vector3(1.2, 1.2, 1.2)
 
 func _ready() -> void:
-	# найдем камеру (приоритет: camera_path затем viewport camera)
+	_base_scale = scale
+	play_idle_rotation()
 	if camera_path != NodePath(""):
 		if has_node(camera_path):
 			_cam = get_node(camera_path) as Camera3D
@@ -64,6 +68,7 @@ func _try_start_drag(screen_pos: Vector2) -> void:
 			best = n
 	if best:
 		_dragging = true
+		on_drag_start()
 		_drag_node = best
 		_orig_global_pos = _drag_node.global_transform.origin
 		_orig_transform = _drag_node.transform
@@ -92,6 +97,7 @@ func _try_end_drag() -> void:
 	tw.tween_property(_drag_node, "global_transform", Transform3D(_orig_transform.basis, _orig_global_pos), return_time)
 	# по завершении очистим состояние
 	tw.connect("finished", Callable(self, "_on_return_finished"))
+	on_drag_end()
 	_dragging = false
 
 func _on_return_finished() -> void:
@@ -112,3 +118,20 @@ func _on_reach_center() -> void:
 		var result = main_controller.try_attach_part(part_id)
 		if result:
 			_try_end_drag()
+
+func play_idle_rotation() -> void:
+	anim_player.speed_scale = 1.0
+	if anim_player.current_animation != "EasyRotationAnimation/easy_rotation" or not anim_player.is_playing():
+		anim_player.play("EasyRotationAnimation/easy_rotation")
+
+func on_drag_start() -> void:
+	# Сбрасываем анимацию в начало и останавливаем
+	anim_player.stop()
+	anim_player.seek(0, true) 
+	scale = _base_scale * DRAG_SCALE
+
+func on_drag_end() -> void:
+	scale = _base_scale
+	var tween_rotation = create_tween()
+	tween_rotation.tween_property(self, "rotation", Vector3.ZERO, 0.2)
+	tween_rotation.tween_callback(play_idle_rotation)
