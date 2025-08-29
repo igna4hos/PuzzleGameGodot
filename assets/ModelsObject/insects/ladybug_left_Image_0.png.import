@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnwqgjk7xqp8u"
-path.s3tc="res://.godot/imported/dragonfly_left_0.png-26bfd771abd2b6b4c150a0471feabe5d.s3tc.ctex"
-path.etc2="res://.godot/imported/dragonfly_left_0.png-26bfd771abd2b6b4c150a0471feabe5d.etc2.ctex"
+uid="uid://bkym6l1pxv4wr"
+path.s3tc="res://.godot/imported/ladybug_left_Image_0.png-7a05323260757882e24af90782403f17.s3tc.ctex"
+path.etc2="res://.godot/imported/ladybug_left_Image_0.png-7a05323260757882e24af90782403f17.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ad848f63e69de3b7505965c0fcdfa640"
+"md5": "68a86c59e483edb8bd03d868afc7398d"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/dragonfly_left_0.png"
-dest_files=["res://.godot/imported/dragonfly_left_0.png-26bfd771abd2b6b4c150a0471feabe5d.s3tc.ctex", "res://.godot/imported/dragonfly_left_0.png-26bfd771abd2b6b4c150a0471feabe5d.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/ladybug_left_Image_0.png"
+dest_files=["res://.godot/imported/ladybug_left_Image_0.png-7a05323260757882e24af90782403f17.s3tc.ctex", "res://.godot/imported/ladybug_left_Image_0.png-7a05323260757882e24af90782403f17.etc2.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chu0yua5jui5u"
-path.s3tc="res://.godot/imported/bee_right_0.png-abbffd1b34352bf011ab61c486012fd9.s3tc.ctex"
-path.etc2="res://.godot/imported/bee_right_0.png-abbffd1b34352bf011ab61c486012fd9.etc2.ctex"
+uid="uid://b5nplve53pl5x"
+path.s3tc="res://.godot/imported/bee_left_Image_0.png-b5cf2ce063f92e6ce3c814213df2bf3f.s3tc.ctex"
+path.etc2="res://.godot/imported/bee_left_Image_0.png-b5cf2ce063f92e6ce3c814213df2bf3f.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/bee_right_0.png"
-dest_files=["res://.godot/imported/bee_right_0.png-abbffd1b34352bf011ab61c486012fd9.s3tc.ctex", "res://.godot/imported/bee_right_0.png-abbffd1b34352bf011ab61c486012fd9.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/bee_left_Image_0.png"
+dest_files=["res://.godot/imported/bee_left_Image_0.png-b5cf2ce063f92e6ce3c814213df2bf3f.s3tc.ctex", "res://.godot/imported/bee_left_Image_0.png-b5cf2ce063f92e6ce3c814213df2bf3f.etc2.ctex"]
 
 [params]
 

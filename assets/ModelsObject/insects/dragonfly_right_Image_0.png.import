@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s60t5ehri14g"
-path.s3tc="res://.godot/imported/dragonfly_right_0.png-a935ef8b49f614c3b58998b6791c43fe.s3tc.ctex"
-path.etc2="res://.godot/imported/dragonfly_right_0.png-a935ef8b49f614c3b58998b6791c43fe.etc2.ctex"
+uid="uid://byi3cgebbqypr"
+path.s3tc="res://.godot/imported/dragonfly_right_Image_0.png-cd968a71b6b06721af192c6870c87127.s3tc.ctex"
+path.etc2="res://.godot/imported/dragonfly_right_Image_0.png-cd968a71b6b06721af192c6870c87127.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/dragonfly_right_0.png"
-dest_files=["res://.godot/imported/dragonfly_right_0.png-a935ef8b49f614c3b58998b6791c43fe.s3tc.ctex", "res://.godot/imported/dragonfly_right_0.png-a935ef8b49f614c3b58998b6791c43fe.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/dragonfly_right_Image_0.png"
+dest_files=["res://.godot/imported/dragonfly_right_Image_0.png-cd968a71b6b06721af192c6870c87127.s3tc.ctex", "res://.godot/imported/dragonfly_right_Image_0.png-cd968a71b6b06721af192c6870c87127.etc2.ctex"]
 
 [params]
 

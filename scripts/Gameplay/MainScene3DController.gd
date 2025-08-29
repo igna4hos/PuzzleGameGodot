@@ -13,7 +13,7 @@ var current_index_side := 0
 var _center_orig_pos: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
-	var level_data = Global.model_kits.get(1, null)
+	var level_data = Global.model_kits.get(Global.selected_level, null)
 	if level_data:
 		center_models = level_data["center_models"]
 		side_parts = level_data["side_parts"]

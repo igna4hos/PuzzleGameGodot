@@ -17,9 +17,14 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Aspect" type="AspectRatioContainer" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Aspect"]
 layout_mode = 2
@@ -29,7 +34,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Aspect/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(200, 200)
+size = Vector2i(400, 400)
 render_target_update_mode = 4
 
 [node name="World" type="Node3D" parent="Aspect/SubViewportContainer/SubViewport"]

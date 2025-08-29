@@ -16,18 +16,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.04589)
 texture = ExtResource("2_vl72t")
 
 [node name="ExitToMenuButton" type="TextureButton" parent="."]
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 108.0
-offset_bottom = 108.0
-scale = Vector2(1.5, 1.5)
+offset_left = 80.0
+offset_top = 50.0
+offset_right = 164.0
+offset_bottom = 134.0
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_kmhuw")
 
 [node name="MainScene3D#Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="LeftElementPart" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, 0)
 script = ExtResource("3")
 
 [node name="EasyRotationAnimation" type="AnimationPlayer" parent="LeftElementPart"]
@@ -45,7 +45,7 @@ libraries = {
 }
 
 [node name="RightElementPart" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, 0)
 script = ExtResource("3")
 
 [node name="EasyRotationAnimation" type="AnimationPlayer" parent="RightElementPart"]

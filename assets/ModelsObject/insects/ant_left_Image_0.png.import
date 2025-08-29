@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpkam1yi20tgq"
-path.s3tc="res://.godot/imported/ant_0.png-49b3ae68eec7366a1b363a51880e6424.s3tc.ctex"
-path.etc2="res://.godot/imported/ant_0.png-49b3ae68eec7366a1b363a51880e6424.etc2.ctex"
+uid="uid://du6nmnuu8weh2"
+path.s3tc="res://.godot/imported/ant_left_Image_0.png-48d5072f4c30097022f8b6c477705a8a.s3tc.ctex"
+path.etc2="res://.godot/imported/ant_left_Image_0.png-48d5072f4c30097022f8b6c477705a8a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/ant_0.png"
-dest_files=["res://.godot/imported/ant_0.png-49b3ae68eec7366a1b363a51880e6424.s3tc.ctex", "res://.godot/imported/ant_0.png-49b3ae68eec7366a1b363a51880e6424.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/ant_left_Image_0.png"
+dest_files=["res://.godot/imported/ant_left_Image_0.png-48d5072f4c30097022f8b6c477705a8a.s3tc.ctex", "res://.godot/imported/ant_left_Image_0.png-48d5072f4c30097022f8b6c477705a8a.etc2.ctex"]
 
 [params]
 

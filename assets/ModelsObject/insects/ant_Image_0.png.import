@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgudgwpyvg2f"
-path.s3tc="res://.godot/imported/dragonfly_0.png-e0ce8c71a2642e63323716035b95e7aa.s3tc.ctex"
-path.etc2="res://.godot/imported/dragonfly_0.png-e0ce8c71a2642e63323716035b95e7aa.etc2.ctex"
+uid="uid://dwaquxv4qchb8"
+path.s3tc="res://.godot/imported/ant_Image_0.png-0a739c9edf432fba6293b4d97233d5aa.s3tc.ctex"
+path.etc2="res://.godot/imported/ant_Image_0.png-0a739c9edf432fba6293b4d97233d5aa.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ad848f63e69de3b7505965c0fcdfa640"
+"md5": "e6732cfc5c14c8bbd803f3934be202e8"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/dragonfly_0.png"
-dest_files=["res://.godot/imported/dragonfly_0.png-e0ce8c71a2642e63323716035b95e7aa.s3tc.ctex", "res://.godot/imported/dragonfly_0.png-e0ce8c71a2642e63323716035b95e7aa.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/ant_Image_0.png"
+dest_files=["res://.godot/imported/ant_Image_0.png-0a739c9edf432fba6293b4d97233d5aa.s3tc.ctex", "res://.godot/imported/ant_Image_0.png-0a739c9edf432fba6293b4d97233d5aa.etc2.ctex"]
 
 [params]
 

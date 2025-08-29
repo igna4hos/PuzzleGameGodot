@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmojbcfr7aar2"
-path.s3tc="res://.godot/imported/ant_left_0.png-434388e4353a466a67add1bd650508f5.s3tc.ctex"
-path.etc2="res://.godot/imported/ant_left_0.png-434388e4353a466a67add1bd650508f5.etc2.ctex"
+uid="uid://cp12n76fdqmqf"
+path.s3tc="res://.godot/imported/ladybug_right_Image_0.png-5959dff3668aaba00efcc29481697101.s3tc.ctex"
+path.etc2="res://.godot/imported/ladybug_right_Image_0.png-5959dff3668aaba00efcc29481697101.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e6732cfc5c14c8bbd803f3934be202e8"
+"md5": "68a86c59e483edb8bd03d868afc7398d"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/ant_left_0.png"
-dest_files=["res://.godot/imported/ant_left_0.png-434388e4353a466a67add1bd650508f5.s3tc.ctex", "res://.godot/imported/ant_left_0.png-434388e4353a466a67add1bd650508f5.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/ladybug_right_Image_0.png"
+dest_files=["res://.godot/imported/ladybug_right_Image_0.png-5959dff3668aaba00efcc29481697101.s3tc.ctex", "res://.godot/imported/ladybug_right_Image_0.png-5959dff3668aaba00efcc29481697101.etc2.ctex"]
 
 [params]
 

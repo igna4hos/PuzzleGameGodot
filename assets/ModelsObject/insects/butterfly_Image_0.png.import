@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjk1pw8qbujpe"
-path.s3tc="res://.godot/imported/ladybug_left_0.png-674cdb791b94de9d244f804daee701c6.s3tc.ctex"
-path.etc2="res://.godot/imported/ladybug_left_0.png-674cdb791b94de9d244f804daee701c6.etc2.ctex"
+uid="uid://c40n2gja63ecr"
+path.s3tc="res://.godot/imported/butterfly_Image_0.png-cd30347b6f3a9f8df6c64405e1f90f7a.s3tc.ctex"
+path.etc2="res://.godot/imported/butterfly_Image_0.png-cd30347b6f3a9f8df6c64405e1f90f7a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "68a86c59e483edb8bd03d868afc7398d"
+"md5": "5377f4716c8c5dce3b36677ef4492953"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/ladybug_left_0.png"
-dest_files=["res://.godot/imported/ladybug_left_0.png-674cdb791b94de9d244f804daee701c6.s3tc.ctex", "res://.godot/imported/ladybug_left_0.png-674cdb791b94de9d244f804daee701c6.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/butterfly_Image_0.png"
+dest_files=["res://.godot/imported/butterfly_Image_0.png-cd30347b6f3a9f8df6c64405e1f90f7a.s3tc.ctex", "res://.godot/imported/butterfly_Image_0.png-cd30347b6f3a9f8df6c64405e1f90f7a.etc2.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b50fd2gbs0va6"
-path.s3tc="res://.godot/imported/butterfly_left_0.png-1da03140195773789de6e97d6c3a5be0.s3tc.ctex"
-path.etc2="res://.godot/imported/butterfly_left_0.png-1da03140195773789de6e97d6c3a5be0.etc2.ctex"
+uid="uid://du8j3pxiqjtg5"
+path.s3tc="res://.godot/imported/butterfly_right_Image_0.png-15f0cc087adf60dd4a0fef2bef4ac873.s3tc.ctex"
+path.etc2="res://.godot/imported/butterfly_right_Image_0.png-15f0cc087adf60dd4a0fef2bef4ac873.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/butterfly_left_0.png"
-dest_files=["res://.godot/imported/butterfly_left_0.png-1da03140195773789de6e97d6c3a5be0.s3tc.ctex", "res://.godot/imported/butterfly_left_0.png-1da03140195773789de6e97d6c3a5be0.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/butterfly_right_Image_0.png"
+dest_files=["res://.godot/imported/butterfly_right_Image_0.png-15f0cc087adf60dd4a0fef2bef4ac873.s3tc.ctex", "res://.godot/imported/butterfly_right_Image_0.png-15f0cc087adf60dd4a0fef2bef4ac873.etc2.ctex"]
 
 [params]
 

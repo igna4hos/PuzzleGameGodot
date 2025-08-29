@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq85vuxninaid"]
+[gd_scene load_steps=6 format=3 uid="uid://bq85vuxninaid"]
 
-[ext_resource type="PackedScene" uid="uid://dbounaydea5tr" path="res://assets/ModelsObject/insects/ant.glb" id="1_lxcjv"]
-[ext_resource type="PackedScene" uid="uid://b426oyi7cvoul" path="res://assets/ModelsObject/insects/butterfly.glb" id="2_yh7c4"]
+[ext_resource type="PackedScene" uid="uid://dndydfp5htfpc" path="res://assets/ModelsObject/insects/ant.glb" id="1_lxcjv"]
+[ext_resource type="PackedScene" uid="uid://sqj6arv3dml0" path="res://assets/ModelsObject/insects/butterfly.glb" id="2_yh7c4"]
+[ext_resource type="PackedScene" uid="uid://ctxwhltbcg2i3" path="res://assets/ModelsObject/insects/ladybug.glb" id="3_dh8ko"]
+[ext_resource type="PackedScene" uid="uid://s87i3xbamsf0" path="res://assets/ModelsObject/insects/bee.glb" id="4_2hrci"]
+[ext_resource type="PackedScene" uid="uid://cvgb2ysbeio1j" path="res://assets/ModelsObject/insects/dragonfly.glb" id="5_1f8o6"]
 
 [node name="InsectsLevel" type="Node3D"]
 
 [node name="ant" parent="." instance=ExtResource("1_lxcjv")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1.1, 1.8, -0.381)
+transform = Transform3D(1.3523, 0, -0.362347, 0, 1.4, 0, 0.362347, 0, 1.3523, -0.6, 1.6, -0.381)
 
 [node name="butterfly" parent="." instance=ExtResource("2_yh7c4")]
-transform = Transform3D(-0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, -0.1, 1.8, 0.023)
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0.22, 1.25, 0.28)
+
+[node name="ladybug" parent="." instance=ExtResource("3_dh8ko")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.9, 1.2, 0.45)
+
+[node name="bee" parent="." instance=ExtResource("4_2hrci")]
+transform = Transform3D(0.990268, 0, 0.139173, 0, 1, 0, -0.139173, 0, 0.990268, -1.7, 1.65, -0.55)
+
+[node name="dragonfly" parent="." instance=ExtResource("5_1f8o6")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.35, 2.2, -0.8)

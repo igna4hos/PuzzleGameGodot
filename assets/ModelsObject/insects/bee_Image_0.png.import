@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d17o16tq0hqtj"
-path.s3tc="res://.godot/imported/ladybug_right_0.png-81618dffeba43ad612547e783902b261.s3tc.ctex"
-path.etc2="res://.godot/imported/ladybug_right_0.png-81618dffeba43ad612547e783902b261.etc2.ctex"
+uid="uid://b0lxb3l76sd51"
+path.s3tc="res://.godot/imported/bee_Image_0.png-fa9cf8219d9ac0cf441ae31e2ed9efa5.s3tc.ctex"
+path.etc2="res://.godot/imported/bee_Image_0.png-fa9cf8219d9ac0cf441ae31e2ed9efa5.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "68a86c59e483edb8bd03d868afc7398d"
+"md5": "9ba979bc05c17a299278c9a3f4d126b0"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/ladybug_right_0.png"
-dest_files=["res://.godot/imported/ladybug_right_0.png-81618dffeba43ad612547e783902b261.s3tc.ctex", "res://.godot/imported/ladybug_right_0.png-81618dffeba43ad612547e783902b261.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/bee_Image_0.png"
+dest_files=["res://.godot/imported/bee_Image_0.png-fa9cf8219d9ac0cf441ae31e2ed9efa5.s3tc.ctex", "res://.godot/imported/bee_Image_0.png-fa9cf8219d9ac0cf441ae31e2ed9efa5.etc2.ctex"]
 
 [params]
 

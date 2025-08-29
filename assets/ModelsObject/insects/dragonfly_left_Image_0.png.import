@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cva5kk7ikv0lc"
-path.s3tc="res://.godot/imported/bee_0.png-3061bbabd7aa449ff2877a862452ddda.s3tc.ctex"
-path.etc2="res://.godot/imported/bee_0.png-3061bbabd7aa449ff2877a862452ddda.etc2.ctex"
+uid="uid://6gka7oi6hf2b"
+path.s3tc="res://.godot/imported/dragonfly_left_Image_0.png-af96d2ae066635f136c1deb55f14fbff.s3tc.ctex"
+path.etc2="res://.godot/imported/dragonfly_left_Image_0.png-af96d2ae066635f136c1deb55f14fbff.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "9ba979bc05c17a299278c9a3f4d126b0"
+"md5": "ad848f63e69de3b7505965c0fcdfa640"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/insects/bee_0.png"
-dest_files=["res://.godot/imported/bee_0.png-3061bbabd7aa449ff2877a862452ddda.s3tc.ctex", "res://.godot/imported/bee_0.png-3061bbabd7aa449ff2877a862452ddda.etc2.ctex"]
+source_file="res://assets/ModelsObject/insects/dragonfly_left_Image_0.png"
+dest_files=["res://.godot/imported/dragonfly_left_Image_0.png-af96d2ae066635f136c1deb55f14fbff.s3tc.ctex", "res://.godot/imported/dragonfly_left_Image_0.png-af96d2ae066635f136c1deb55f14fbff.etc2.ctex"]
 
 [params]
 

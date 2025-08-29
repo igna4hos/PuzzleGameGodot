@@ -9,16 +9,16 @@
 [node name="SingleCar" type="Node3D"]
 
 [node name="panzer" parent="." instance=ExtResource("1_ry4mp")]
-transform = Transform3D(-0.688282, -0.0650618, -1.57494, -0.161866, 1.71237, 0, 1.56795, 0.148215, -0.69135, -1.02633, 1.86148, -0.427435)
+transform = Transform3D(-0.443193, -0.0418942, -1.66139, -0.161866, 1.71237, 0, 1.65402, 0.156351, -0.445169, -0.9, 1.861, -0.427)
 
 [node name="train" parent="." instance=ExtResource("4_2rovc")]
-transform = Transform3D(0.592487, 0.027941, -0.142402, -0.0287349, 0.609323, 0, 0.142244, 0.00670804, 0.593146, -1.24489, 1.28757, 1.29954)
+transform = Transform3D(0.592487, 0.027941, -0.142402, -0.0287349, 0.609323, 0, 0.142244, 0.00670804, 0.593146, -1.14, 1.288, 1.2)
 
 [node name="сar" parent="." instance=ExtResource("1")]
-transform = Transform3D(-0.578135, 0, 0.274518, 0, 0.64, 0, -0.274518, 0, -0.578135, -0.547194, 1.1766, 1.06378)
+transform = Transform3D(-0.578135, 0, 0.274518, 0, 0.64, 0, -0.274518, 0, -0.578135, -0.45, 1.12, 0.95)
 
 [node name="bike" parent="." instance=ExtResource("3_qx5jw")]
-transform = Transform3D(-0.275372, 0, -0.740453, 0, 0.79, 0, 0.740453, 0, -0.275372, 0.095, 1.204, 0)
+transform = Transform3D(-0.275372, 0, -0.740453, 0, 0.79, 0, 0.740453, 0, -0.275372, 0.2, 1.25, 0)
 
 [node name="scooter" parent="." instance=ExtResource("5_3airq")]
-transform = Transform3D(-0.374139, 0, -0.603424, 0, 0.71, 0, 0.603424, 0, -0.374139, 0.597135, 1.30249, -0.834467)
+transform = Transform3D(-0.374139, 0, -0.603424, 0, 0.71, 0, 0.603424, 0, -0.374139, 0.8, 1.302, -0.834)
