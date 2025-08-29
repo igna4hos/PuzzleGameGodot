@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnicxr8gq5ru6"]
+
+[ext_resource type="AnimationLibrary" uid="uid://uc1mfdhsctc3" path="res://assets/animations/AppearanceObjectAnimation.res" id="1_15tb6"]
+[ext_resource type="PackedScene" uid="uid://ci1pwo0fhtcf1" path="res://assets/ModelsObject/cars/train.glb" id="2_c3gdn"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="AppearanceObjectAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("1_15tb6")
+}
+
+[node name="train2" parent="." instance=ExtResource("2_c3gdn")]
