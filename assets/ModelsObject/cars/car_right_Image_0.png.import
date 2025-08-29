@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvpq8xlv2ad8h"
-path.s3tc="res://.godot/imported/bike_0.png-b7a4336f0d0b7f188fcdbbd748fb7c0c.s3tc.ctex"
-path.etc2="res://.godot/imported/bike_0.png-b7a4336f0d0b7f188fcdbbd748fb7c0c.etc2.ctex"
+uid="uid://1jhjbgn564b3"
+path.s3tc="res://.godot/imported/car_right_Image_0.png-d63f38d9613527297956c1de98860e81.s3tc.ctex"
+path.etc2="res://.godot/imported/car_right_Image_0.png-d63f38d9613527297956c1de98860e81.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c52b49e21aabeaad82c6283e4bb61e5b"
+"md5": "5f6faabc203117e527c29e9d871b113b"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/bike_0.png"
-dest_files=["res://.godot/imported/bike_0.png-b7a4336f0d0b7f188fcdbbd748fb7c0c.s3tc.ctex", "res://.godot/imported/bike_0.png-b7a4336f0d0b7f188fcdbbd748fb7c0c.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/car_right_Image_0.png"
+dest_files=["res://.godot/imported/car_right_Image_0.png-d63f38d9613527297956c1de98860e81.s3tc.ctex", "res://.godot/imported/car_right_Image_0.png-d63f38d9613527297956c1de98860e81.etc2.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cinkaonedji6k"
-path.s3tc="res://.godot/imported/car_left_0.png-0485facb182257950514fe6e6dce795d.s3tc.ctex"
-path.etc2="res://.godot/imported/car_left_0.png-0485facb182257950514fe6e6dce795d.etc2.ctex"
+uid="uid://b0kxwbhgmt14k"
+path.s3tc="res://.godot/imported/car_Image_0.png-2a010483136a46c858755787d7366534.s3tc.ctex"
+path.etc2="res://.godot/imported/car_Image_0.png-2a010483136a46c858755787d7366534.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/car_left_0.png"
-dest_files=["res://.godot/imported/car_left_0.png-0485facb182257950514fe6e6dce795d.s3tc.ctex", "res://.godot/imported/car_left_0.png-0485facb182257950514fe6e6dce795d.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/car_Image_0.png"
+dest_files=["res://.godot/imported/car_Image_0.png-2a010483136a46c858755787d7366534.s3tc.ctex", "res://.godot/imported/car_Image_0.png-2a010483136a46c858755787d7366534.etc2.ctex"]
 
 [params]
 

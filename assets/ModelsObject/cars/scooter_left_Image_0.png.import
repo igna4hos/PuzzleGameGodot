@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvvcpor03b8u5"
-path.s3tc="res://.godot/imported/scooter_0.png-183b611579db29c6147efcab01b9de7a.s3tc.ctex"
-path.etc2="res://.godot/imported/scooter_0.png-183b611579db29c6147efcab01b9de7a.etc2.ctex"
+uid="uid://dl03c2d6yd23e"
+path.s3tc="res://.godot/imported/scooter_left_Image_0.png-50cffab8478c1c0b52d1cacb3218d1f2.s3tc.ctex"
+path.etc2="res://.godot/imported/scooter_left_Image_0.png-50cffab8478c1c0b52d1cacb3218d1f2.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/scooter_0.png"
-dest_files=["res://.godot/imported/scooter_0.png-183b611579db29c6147efcab01b9de7a.s3tc.ctex", "res://.godot/imported/scooter_0.png-183b611579db29c6147efcab01b9de7a.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/scooter_left_Image_0.png"
+dest_files=["res://.godot/imported/scooter_left_Image_0.png-50cffab8478c1c0b52d1cacb3218d1f2.s3tc.ctex", "res://.godot/imported/scooter_left_Image_0.png-50cffab8478c1c0b52d1cacb3218d1f2.etc2.ctex"]
 
 [params]
 

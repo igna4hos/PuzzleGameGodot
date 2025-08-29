@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnjvbhko0v617"
-path.s3tc="res://.godot/imported/bike_left_0.png-5e48d62da151da399692ae0bba6619b3.s3tc.ctex"
-path.etc2="res://.godot/imported/bike_left_0.png-5e48d62da151da399692ae0bba6619b3.etc2.ctex"
+uid="uid://douryjiv0ofgd"
+path.s3tc="res://.godot/imported/bike_left_Image_0.png-95bb45c98249ebaf81e8012009ae9f0c.s3tc.ctex"
+path.etc2="res://.godot/imported/bike_left_Image_0.png-95bb45c98249ebaf81e8012009ae9f0c.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/bike_left_0.png"
-dest_files=["res://.godot/imported/bike_left_0.png-5e48d62da151da399692ae0bba6619b3.s3tc.ctex", "res://.godot/imported/bike_left_0.png-5e48d62da151da399692ae0bba6619b3.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/bike_left_Image_0.png"
+dest_files=["res://.godot/imported/bike_left_Image_0.png-95bb45c98249ebaf81e8012009ae9f0c.s3tc.ctex", "res://.godot/imported/bike_left_Image_0.png-95bb45c98249ebaf81e8012009ae9f0c.etc2.ctex"]
 
 [params]
 

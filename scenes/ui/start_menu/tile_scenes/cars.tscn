@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://qb18o37ddnut"]
 
-[ext_resource type="PackedScene" uid="uid://c4mbjql0cs0nn" path="res://assets/ModelsObject/cars/car.glb" id="1"]
-[ext_resource type="PackedScene" uid="uid://cdh2kqocy1ejv" path="res://assets/ModelsObject/cars/panzer.glb" id="1_ry4mp"]
-[ext_resource type="PackedScene" uid="uid://mpf6giiyx1rb" path="res://assets/ModelsObject/cars/bike.glb" id="3_qx5jw"]
-[ext_resource type="PackedScene" uid="uid://dw4xutea46p8c" path="res://assets/ModelsObject/cars/train.glb" id="4_2rovc"]
-[ext_resource type="PackedScene" uid="uid://ctkgtsmq0rela" path="res://assets/ModelsObject/cars/scooter.glb" id="5_3airq"]
+[ext_resource type="PackedScene" uid="uid://dxr1i1f3osv5q" path="res://assets/ModelsObject/cars/car.glb" id="1"]
+[ext_resource type="PackedScene" uid="uid://csuuw4m4ra563" path="res://assets/ModelsObject/cars/panzer.glb" id="1_ry4mp"]
+[ext_resource type="PackedScene" uid="uid://bjqttwdgp430p" path="res://assets/ModelsObject/cars/bike.glb" id="3_qx5jw"]
+[ext_resource type="PackedScene" uid="uid://ci1pwo0fhtcf1" path="res://assets/ModelsObject/cars/train.glb" id="4_2rovc"]
+[ext_resource type="PackedScene" uid="uid://umxv1smqt88v" path="res://assets/ModelsObject/cars/scooter.glb" id="5_3airq"]
 
 [node name="SingleCar" type="Node3D"]
 

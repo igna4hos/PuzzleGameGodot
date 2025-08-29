@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dju76wyprina4"
-path.s3tc="res://.godot/imported/panzer_right_0.png-62a33718d0243c58011890f7be45312c.s3tc.ctex"
-path.etc2="res://.godot/imported/panzer_right_0.png-62a33718d0243c58011890f7be45312c.etc2.ctex"
+uid="uid://bon4rtmeffm3h"
+path.s3tc="res://.godot/imported/car_left_Image_0.png-077c02169aadf375013e10758a35731a.s3tc.ctex"
+path.etc2="res://.godot/imported/car_left_Image_0.png-077c02169aadf375013e10758a35731a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e07edbff417efde6e789d4165f83fe1e"
+"md5": "5f6faabc203117e527c29e9d871b113b"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/panzer_right_0.png"
-dest_files=["res://.godot/imported/panzer_right_0.png-62a33718d0243c58011890f7be45312c.s3tc.ctex", "res://.godot/imported/panzer_right_0.png-62a33718d0243c58011890f7be45312c.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/car_left_Image_0.png"
+dest_files=["res://.godot/imported/car_left_Image_0.png-077c02169aadf375013e10758a35731a.s3tc.ctex", "res://.godot/imported/car_left_Image_0.png-077c02169aadf375013e10758a35731a.etc2.ctex"]
 
 [params]
 

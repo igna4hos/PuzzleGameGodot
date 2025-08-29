@@ -29,9 +29,9 @@ func _apply_transparency_recursive(node: Node, alpha: float, side: String) -> vo
 	for child in node.get_children():
 		if child is MeshInstance3D:
 			#Checking the paint on one side
-			if side == "left" and not child.name.ends_with("2"):
+			if side == "left" and not child.name.ends_with("_0"):
 				continue
-			elif side == "right" and not child.name.ends_with("_001"):
+			elif side == "right" and not child.name.ends_with("_1"):
 				continue
 			#both - both sides with low transparency
 			var mi: MeshInstance3D = child

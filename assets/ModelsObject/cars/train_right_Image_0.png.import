@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://flg8uc58tgh8"
-path.s3tc="res://.godot/imported/scooter_right_0.png-ebb6b3641bed663b29fada5ae7626ce4.s3tc.ctex"
-path.etc2="res://.godot/imported/scooter_right_0.png-ebb6b3641bed663b29fada5ae7626ce4.etc2.ctex"
+uid="uid://ppsiqrdrrior"
+path.s3tc="res://.godot/imported/train_right_Image_0.png-2e56f6a3bcc27bb788e261dc18bf32b4.s3tc.ctex"
+path.etc2="res://.godot/imported/train_right_Image_0.png-2e56f6a3bcc27bb788e261dc18bf32b4.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8469028d9dedd7599f652c22c2ad20d3"
+"md5": "56afc9c4b53cd4a24715e6b9c93c8f32"
 }
 
 [deps]
 
-source_file="res://assets/ModelsObject/cars/scooter_right_0.png"
-dest_files=["res://.godot/imported/scooter_right_0.png-ebb6b3641bed663b29fada5ae7626ce4.s3tc.ctex", "res://.godot/imported/scooter_right_0.png-ebb6b3641bed663b29fada5ae7626ce4.etc2.ctex"]
+source_file="res://assets/ModelsObject/cars/train_right_Image_0.png"
+dest_files=["res://.godot/imported/train_right_Image_0.png-2e56f6a3bcc27bb788e261dc18bf32b4.s3tc.ctex", "res://.godot/imported/train_right_Image_0.png-2e56f6a3bcc27bb788e261dc18bf32b4.etc2.ctex"]
 
 [params]
 
