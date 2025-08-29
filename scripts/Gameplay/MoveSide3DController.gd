@@ -37,12 +37,16 @@ func _unhandled_input(event) -> void:
 		else:
 			_try_end_drag()
 		return
+	
 	if event is InputEventScreenTouch:
 		var st := event as InputEventScreenTouch
 		if st.pressed:
-			_try_start_drag(st.position)
+			if TouchManager.can_process_touch(st.index):
+				_try_start_drag(st.position)
 		else:
-			_try_end_drag()
+			if TouchManager.active_touch_id == st.index:
+				_try_end_drag()
+				TouchManager.release_touch(st.index)
 		return
 
 	# Move (mouse / drag)
@@ -50,7 +54,9 @@ func _unhandled_input(event) -> void:
 		if event is InputEventMouseMotion:
 			_update_drag((event as InputEventMouseMotion).position)
 		elif event is InputEventScreenDrag:
-			_update_drag((event as InputEventScreenDrag).position)
+			var sd := event as InputEventScreenDrag
+			if sd.index == TouchManager.active_touch_id:
+				_update_drag(sd.position)
 
 func _try_start_drag(screen_pos: Vector2) -> void:
 	# ищем ближашего ребёнка Node3D по экранной позиции
@@ -92,11 +98,11 @@ func _try_end_drag() -> void:
 		_dragging = false
 		_drag_node = null
 		return
-	# запустить твин, чтобы вернуть в исходную позицию
+
 	var tw = _drag_node.create_tween()
 	tw.tween_property(_drag_node, "global_transform", Transform3D(_orig_transform.basis, _orig_global_pos), return_time)
-	# по завершении очистим состояние
 	tw.connect("finished", Callable(self, "_on_return_finished"))
+
 	on_drag_end()
 	_dragging = false
 
